@@ -32,6 +32,7 @@ a {
 .primary-default {
   color: var(--primary);
   background: var(--white);
+  border: none;
 }
 .primary-solid {
   background: var(--primary);
