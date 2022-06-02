@@ -1,0 +1,29 @@
+.sidebar {
+  position: fixed;
+  top: 80px;
+  left: 0px;
+  bottom: 0px;
+  background: var(--white);
+  z-index: 9;
+  width: 80px;
+  height: 100%;
+  font-size: 14px;
+  transition-duration: 550ms;
+  overflow-y: auto;
+}
+.sidebar.active {
+  width: 250px;
+}
+.sidebar.active .controller {
+  flex: 1 1;
+  text-align: right;
+}
+.sidebar .controller #control-btn {
+  transition-duration: 600ms;
+}
+.sidebar.active .controller #control-btn {
+  background: var(--primary);
+  color: var(--white);
+  transform: rotate(-180deg);
+  transition-duration: 600ms;
+}

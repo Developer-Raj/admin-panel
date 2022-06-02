@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   padding: 0 !important;
   margin: 0 !important;
   box-sizing: border-box;
   transition: all ease 150ms;
+  font-family: "Work Sans", sans-serif;
 }
 
 :root {
@@ -11,9 +15,19 @@
   --white: white;
   --dark: #393939;
   --outline: #e7e7e7;
+  --overlay: rgb(0 0 0 / 30%) !important;
   --sm-radius: 6px;
   --lg-radius: 10px;
   --xl-radius: 50px;
+  --btn-shadow: inset 0px -2px 1px 0px rgb(0 0 0 / 20%);
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: var(--primary-hover);
+  border-radius: var(--sm-radius);
 }
 
 html {
@@ -52,6 +66,30 @@ a {
   background-color: var(--primary);
   color: var(--white);
 }
+.btn-shadow {
+  box-shadow: var(--btn-shadow);
+}
+.btn-30 {
+  width: 30px;
+  height: 30px;
+}
+.btn-40 {
+  width: 40px;
+  height: 40px;
+}
+.btn-rounded-sm {
+  border: none;
+  border-radius: 10px;
+  width: 25px;
+  height: 25px;
+}
+.btn-rounded-md {
+  border: none;
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+}
+
 .btn-rounded {
   border: none;
   border-radius: 10px;

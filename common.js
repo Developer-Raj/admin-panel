@@ -58,25 +58,27 @@ function toggleHamMenu() {
     menuContainer.classList.remove("active");
   }
 }
+// Function to toggle desktop view sidebar
+function toggleSidebar() {
+  let sidebar = $("#sidebar");
+
+  if (sidebar.classList.contains("active")) {
+    sidebar.classList.remove("active");
+  } else {
+    sidebar.classList.add("active");
+  }
+}
 
 /* Event Listener */
 // Toggling Fullscreen when desktop view header fullscreen button is clicked
-$("#fullscreen-button").onclick = (e) => {
-  execDesktopViewFullscreen(e);
-};
+$("#fullscreen-button").onclick = (e) => execDesktopViewFullscreen(e);
 // Toggle Fullscreenw when mobile view sidebar fullscreen button is clicked
-$("#MMFS-btn").onclick = (e) => {
-  execMobileViewFullscreen();
-};
+$("#MMFS-btn").onclick = (e) => execMobileViewFullscreen();
 // Toggling menu when Menu Btn is clicked
-$("#menu-btn").onclick = () => {
-  toggleHamMenu();
-};
+$("#menu-btn").onclick = () => toggleHamMenu();
 // Toggling menu again when menu content is clicked
-$("#CloseMenu-btn").onclick = () => {
-  toggleHamMenu();
-};
+$("#CloseMenu-btn").onclick = () => toggleHamMenu();
 // Toggling menu when overlay is clicked
-$("#menuOverlay").onclick = () => {
-  toggleHamMenu();
-};
+$("#menuOverlay").onclick = () => toggleHamMenu();
+// Toggling menu when sidebar is active
+$("#control-btn").onclick = () => toggleSidebar();
