@@ -12,6 +12,8 @@
 :root {
   --primary: #984dc3;
   --primary-hover: #773c98;
+  --secondary: #505edc;
+  --secondary-hover: #343e96;
   --white: white;
   --dark: #393939;
   --outline: #e7e7e7;
@@ -48,8 +50,18 @@ a {
   background: var(--white);
   border: none;
 }
+.secondary-default {
+  color: var(--secondary);
+  background: var(--white);
+  border: none;
+}
 .primary-solid {
   background: var(--primary);
+  color: var(--white);
+  border: none;
+}
+.secondary-solid {
+  background: var(--secondary);
   color: var(--white);
   border: none;
 }
@@ -57,13 +69,26 @@ a {
   background: var(--primary-hover);
   color: var(--white);
 }
+.secondary-solid:hover {
+  background: var(--secondary-hover);
+  color: var(--white);
+}
 .primary-outline {
   background-color: transparent;
   border: 1px solid var(--primary) !important;
   color: var(--primary);
 }
+.secondary-outline {
+  background-color: transparent;
+  border: 1px solid var(--secondary) !important;
+  color: var(--secondary);
+}
 .primary-outline:hover {
   background-color: var(--primary);
+  color: var(--white);
+}
+.secondary-outline:hover {
+  background-color: var(--secondary);
   color: var(--white);
 }
 .btn-shadow {

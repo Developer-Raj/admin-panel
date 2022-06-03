@@ -7,7 +7,7 @@
     <title>Add Category Modal</title>
 
     <link rel="stylesheet" href="../common.css" />
-    <link rel="stylesheet" href="./add-cateogory-modal.css" />
+    <link rel="stylesheet" href="./modal.css" />
 
     <!-- Library -->
     <link
@@ -28,224 +28,349 @@
     <!-- Library -->
   </head>
   <body>
-    <button
-      class="primary-solid rounded-corner-sm px-3 py-2 btn-shadow m-3"
-      id="open-add-category-modal"
-    >
-      Add Category
-    </button>
-    <div class="add-category-modal" id="add-category">
-      <div class="container-fluid mx-auto">
-        <!-- Modal Metadata and controller -->
-        <div class="row">
-          <div class="col-10">
-            <h4 class="modal-title">Add Category</h4>
-          </div>
-          <div class="col-2 text-end">
-            <button
-              id="close-category-modal"
-              class="btn-rounded-md primary-solid btn-shadow"
-            >
-              <i class="fas fa-xmark"></i>
-            </button>
-          </div>
-        </div>
-        <!-- Modal Metadata and controller -->
-
-        <!-- Modal Content -->
-        <div class="row mt-3">
-          <form id="add-category-form">
-            <div class="container-fluid mx-auto p-0">
-              <div class="row">
-                <!-- Name -->
-                <div class="col-12 col-sm-6 p-2">
-                  <label for="name">
-                    <span class="label"
-                      >Name <span class="marked">*</span></span
-                    >
-                    <input type="text" name="name" id="name" required />
-                  </label>
-                </div>
-                <!-- Name -->
-
-                <!-- Meta Title -->
-                <div class="col-12 col-sm-6 p-2">
-                  <label for="meta-title">
-                    <span class="label"
-                      >Meta Title <span class="marked">*</span></span
-                    >
-                    <input
-                      type="text"
-                      name="meta-title"
-                      id="meta-title"
-                      required
-                    />
-                  </label>
-                </div>
-                <!-- Meta Title -->
-
-                <!-- Icon Set -->
-                <div class="col-12 col-sm-6 p-2">
-                  <label for="icon-selector">
-                    <span class="label"
-                      >Icon <span class="marked">*</span></span
-                    >
-                    <select name="icon" id="icon-selector" required>
-                      <option value="-" selected disabled>Select Icon</option>
-                      <option value="fas fa-home">Home</option>
-                      <option value="fas fa-xmark">Times</option>
-                      <option value="fas fa-chartline">Chart Line</option>
-                    </select>
-                  </label>
-                </div>
-                <!-- Icon Set -->
-
-                <!-- Meta Keywords -->
-                <div class="col-12 col-sm-6 p-2">
-                  <label for="meta-keywords">
-                    <span class="label"
-                      >Meta Keywords <span class="marked">*</span></span
-                    >
-                    <input
-                      type="text"
-                      name="meta-keywords"
-                      id="meta-keywords"
-                      required
-                    />
-                  </label>
-                </div>
-                <!-- Meta Keywords -->
-
-                <!-- Image -->
-                <div class="col-12 col-sm-12 p-2">
-                  <label for="image">
-                    <span class="label"
-                      >Image <span class="marked">*</span></span
-                    >
-                    <input
-                      type="file"
-                      name="image"
-                      id="image"
-                      accept="img/png, img/jpeg"
-                      required
-                    />
-                  </label>
-                </div>
-                <!-- Image -->
-
-                <!-- Meta Description -->
-                <div class="col-12 col-sm-12 p-2">
-                  <label for="meta-description">
-                    <span class="label"
-                      >Meta Description <span class="marked">*</span></span
-                    >
-                    <textarea
-                      name="meta-description"
-                      id="meta-description"
-                      required
-                    ></textarea>
-                  </label>
-                </div>
-                <!-- Meta Description -->
-
-                <!-- Parent Category -->
-                <div class="col-12 p-2">
-                  <label for="parent-category">
-                    <span class="label"
-                      >Parent Category <span class="marked">*</span></span
-                    >
-                    <select
-                      name="parent-category"
-                      id="parent-category"
-                      required
-                    >
-                      <option value="0" selected disabled>
-                        Select parent category
-                      </option>
-                      <option value="123">Electronics</option>
-                      <option value="124">Mobiles</option>
-                    </select>
-                  </label>
-                </div>
-                <!-- Parent Category -->
-
-                <!-- Highlight In -->
-                <div class="col-12 p-2">
-                  <label for="highlight-category">
-                    <span class="label mb-2 d-block"
-                      >Highlight In <span class="marked">*</span></span
-                    >
-                    <label
-                      for="top-category"
-                      class="d-flex justify-content-start align-items-center"
-                    >
-                      <input
-                        type="checkbox"
-                        name="top-category"
-                        id="top-category"
-                        value="top-category"
-                        class="me-2"
-                      />
-                      Top Category
-                    </label>
-                    <label
-                      for="special-category"
-                      class="d-flex justify-content-start align-items-center"
-                    >
-                      <input
-                        type="checkbox"
-                        name="special-category"
-                        id="special-category"
-                        value="special-category"
-                        class="me-2"
-                      />
-                      Special Category
-                    </label>
-                  </label>
-                </div>
-                <!-- Highlight In -->
-
-                <!-- Form Submit Button -->
-                <div class="col-12 p-2 mt-3">
-                  <button
-                    class="fluid-width btn-shadow primary-solid rounded-corner-lg px-3 py-2"
-                  >
-                    Submit
-                  </button>
-                </div>
-                <!-- Form Submit Button -->
-              </div>
+    <main>
+      <button
+        class="primary-solid rounded-corner-sm px-3 py-2 btn-shadow m-3"
+        id="open-add-category-modal"
+      >
+        Add Category
+      </button>
+      <button
+        class="secondary-solid rounded-corner-sm px-3 py-2 btn-shadow mt-3 me-3 mb-3"
+        id="open-import-category-modal"
+      >
+        Import Category
+      </button>
+      <!-- Add Category -->
+      <div
+        class="add-category-modal custom-modal"
+        id="add-category"
+        data-toggle="false"
+      >
+        <div class="container-fluid mx-auto">
+          <!-- Modal Metadata and controller -->
+          <div class="row">
+            <div class="col-10">
+              <h4 class="modal-title">Add Category</h4>
             </div>
-          </form>
+            <div class="col-2 text-end">
+              <button
+                id="close-category-modal"
+                class="btn-rounded-md primary-solid btn-shadow"
+              >
+                <i class="fas fa-xmark"></i>
+              </button>
+            </div>
+            <div class="col-12">
+              <span class="note"
+                ><i
+                  >The field label marked with <span class="marked">*</span> are
+                  required fields.</i
+                ></span
+              >
+            </div>
+          </div>
+          <!-- Modal Metadata and controller -->
+
+          <!-- Modal Content -->
+          <div class="row mt-3">
+            <form id="add-category-form">
+              <div class="container-fluid mx-auto p-0">
+                <div class="row">
+                  <!-- Name -->
+                  <div class="col-12 col-sm-6 p-2">
+                    <label for="name">
+                      <span class="label"
+                        >Name <span class="marked">*</span></span
+                      >
+                      <input type="text" name="name" id="name" required />
+                    </label>
+                  </div>
+                  <!-- Name -->
+
+                  <!-- Meta Title -->
+                  <div class="col-12 col-sm-6 p-2">
+                    <label for="meta-title">
+                      <span class="label"
+                        >Meta Title <span class="marked">*</span></span
+                      >
+                      <input
+                        type="text"
+                        name="meta-title"
+                        id="meta-title"
+                        required
+                      />
+                    </label>
+                  </div>
+                  <!-- Meta Title -->
+
+                  <!-- Icon Set -->
+                  <div class="col-12 col-sm-6 p-2">
+                    <label for="icon-selector">
+                      <span class="label"
+                        >Icon <span class="marked">*</span></span
+                      >
+                      <select name="icon" id="icon-selector" required>
+                        <option value="-" selected disabled>Select Icon</option>
+                        <option value="fas fa-home">Home</option>
+                        <option value="fas fa-xmark">Times</option>
+                        <option value="fas fa-chartline">Chart Line</option>
+                      </select>
+                    </label>
+                  </div>
+                  <!-- Icon Set -->
+
+                  <!-- Meta Keywords -->
+                  <div class="col-12 col-sm-6 p-2">
+                    <label for="meta-keywords">
+                      <span class="label"
+                        >Meta Keywords <span class="marked">*</span></span
+                      >
+                      <input
+                        type="text"
+                        name="meta-keywords"
+                        id="meta-keywords"
+                        required
+                      />
+                    </label>
+                  </div>
+                  <!-- Meta Keywords -->
+
+                  <!-- Image -->
+                  <div class="col-12 col-sm-12 p-2">
+                    <label for="image">
+                      <span class="label"
+                        >Image <span class="marked">*</span></span
+                      >
+                      <input
+                        type="file"
+                        name="image"
+                        id="image"
+                        accept="img/png, img/jpeg"
+                        required
+                      />
+                    </label>
+                  </div>
+                  <!-- Image -->
+
+                  <!-- Meta Description -->
+                  <div class="col-12 col-sm-12 p-2">
+                    <label for="meta-description">
+                      <span class="label"
+                        >Meta Description <span class="marked">*</span></span
+                      >
+                      <textarea
+                        name="meta-description"
+                        id="meta-description"
+                        required
+                      ></textarea>
+                    </label>
+                  </div>
+                  <!-- Meta Description -->
+
+                  <!-- Parent Category -->
+                  <div class="col-12 p-2">
+                    <label for="parent-category">
+                      <span class="label"
+                        >Parent Category <span class="marked">*</span></span
+                      >
+                      <select
+                        name="parent-category"
+                        id="parent-category"
+                        required
+                      >
+                        <option value="0" selected disabled>
+                          Select parent category
+                        </option>
+                        <option value="123">Electronics</option>
+                        <option value="124">Mobiles</option>
+                      </select>
+                    </label>
+                  </div>
+                  <!-- Parent Category -->
+
+                  <!-- Highlight In -->
+                  <div class="col-12 p-2">
+                    <label for="highlight-category">
+                      <span class="label mb-2 d-block"
+                        >Highlight In <span class="marked">*</span></span
+                      >
+                      <label
+                        for="top-category"
+                        class="d-flex justify-content-start align-items-center"
+                      >
+                        <input
+                          type="checkbox"
+                          name="top-category"
+                          id="top-category"
+                          value="top-category"
+                          class="me-2"
+                        />
+                        Top Category
+                      </label>
+                      <label
+                        for="special-category"
+                        class="d-flex justify-content-start align-items-center"
+                      >
+                        <input
+                          type="checkbox"
+                          name="special-category"
+                          id="special-category"
+                          value="special-category"
+                          class="me-2"
+                        />
+                        Special Category
+                      </label>
+                    </label>
+                  </div>
+                  <!-- Highlight In -->
+
+                  <!-- Form Submit Button -->
+                  <div class="col-12 p-2 mt-3">
+                    <button
+                      class="fluid-width btn-shadow primary-solid rounded-corner-lg px-3 py-2"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                  <!-- Form Submit Button -->
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Modal Content -->
         </div>
-        <!-- Modal Content -->
       </div>
-    </div>
-    <div class="overlay" id="add-category-overlay"></div>
+      <div class="overlay" id="add-category-overlay"></div>
+      <!-- Add Category -->
+
+      <!-- Import Category -->
+      <div
+        class="import-category-modal custom-modal"
+        id="import-category"
+        data-toggle="false"
+      >
+        <div class="container-fluid mx-auto">
+          <!-- Modal Metadata and controller -->
+          <div class="row">
+            <div class="col-10">
+              <h4 class="modal-title">Import Category</h4>
+            </div>
+            <div class="col-2 text-end">
+              <button
+                id="close-import-category-modal"
+                class="btn-rounded-md primary-solid btn-shadow"
+              >
+                <i class="fas fa-xmark"></i>
+              </button>
+            </div>
+            <div class="col-12">
+              <span class="note"
+                ><i
+                  >The field label marked with <span class="marked">*</span> are
+                  required fields.</i
+                ></span
+              >
+            </div>
+            <div class="col-12">
+              <span class="note">
+                The correct column order is (name<span class="marked">*</span>,
+                parent_category) and you must follow this.
+              </span>
+            </div>
+          </div>
+          <!-- Modal Metadata and controller -->
+
+          <!-- Modal Content -->
+          <div class="row mt-3">
+            <form id="import-category-form">
+              <div class="container-fluid mx-auto p-0">
+                <div class="row">
+                  <!-- Upload csv file -->
+                  <div class="col-12 col-sm-6 p-2">
+                    <label for="upload_file">
+                      <span class="label"
+                        >Upload CSV File <span class="marked">*</span></span
+                      >
+                      <input type="file" name="upload_file" id="upload_file" />
+                    </label>
+                  </div>
+                  <!-- Upload csv file -->
+
+                  <!-- sample file -->
+                  <div class="col-12 col-sm-6 p-2">
+                    <label for="label">
+                      <span class="label">Sample File</span>
+                    </label>
+                    <a
+                      class="btn-shadow rounded-corner-sm secondary-solid px-3 py-2 fluid-width d-flex justify-content-center align-items-center"
+                      download
+                      href="#sample"
+                      style="
+                        display: block;
+                        color: var(--white) !important;
+                        font-size: 12px;
+                        height: 38px;
+                        margin-top: 3px !important;
+                        outline: 1px solid var(--secondary);
+                      "
+                    >
+                      <i class="fas fa-download me-1"></i>
+                      Download
+                    </a>
+                  </div>
+                  <!-- sample file -->
+
+                  <!-- Submit Form -->
+                  <div class="col-12 p-2">
+                    <button
+                      class="primary-solid btn-shadow rounded-corner-sm px-3 py-2 fluid-width mt-3"
+                      type="submit"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                  <!-- Submit Form -->
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Modal Content -->
+        </div>
+      </div>
+      <div class="overlay" id="import-category-overlay"></div>
+      <!-- Import Category -->
+    </main>
 
     <script src="../common.js"></script>
     <script>
       // function to toggle add-category-modal
-      function toggleAddCategoryModal() {
-        let overlay = $("#add-category-overlay");
-        let modal = $("#add-category");
+      function toggleAddCategoryModal(modalID, overlayID) {
+        let overlay = $(overlayID);
+        let modal = $(modalID);
 
-        console.log("clicked");
-
-        if (modal.classList.contains("active")) {
-          modal.classList.remove("active");
-          overlay.classList.remove("active");
-        } else {
+        if (modal.dataset.toggle === "false") {
+          modal.dataset.toggle = "true";
           modal.classList.add("active");
           overlay.classList.add("active");
+        } else {
+          modal.dataset.toggle = "false";
+          modal.classList.remove("active");
+          overlay.classList.remove("active");
         }
       }
       // #open-add-category-modal is use to trigger add-category-modal for demo use
       $("button#open-add-category-modal").onclick = () => {
-        toggleAddCategoryModal();
+        toggleAddCategoryModal("#add-category", "#add-category-overlay");
+      };
+      $("button#open-import-category-modal").onclick = () => {
+        toggleAddCategoryModal("#import-category", "#import-category-overlay");
       };
       $("button#close-category-modal").onclick = () => {
-        toggleAddCategoryModal();
+        toggleAddCategoryModal("#add-category", "#add-category-overlay");
+      };
+      $("button#close-import-category-modal").onclick = () => {
+        toggleAddCategoryModal("#import-category", "#import-category-overlay");
       };
     </script>
   </body>
