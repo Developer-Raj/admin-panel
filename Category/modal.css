@@ -1,3 +1,4 @@
+.popup-overlay,
 #add-category-overlay,
 #import-category-overlay {
   position: fixed;
@@ -7,12 +8,14 @@
   right: 0;
   transform: scale(0);
   background: var(--overlay);
-  z-index: 10;
+  z-index: 1000;
   opacity: 0;
+  width: 100%;
   /* animation: animate-overlay-close 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
     10ms 1 forwards normal; */
   display: none;
 }
+.popup-overlay.active,
 #add-category-overlay.active,
 #import-category-overlay.active {
   transform: scale(1);
@@ -20,6 +23,7 @@
     250ms 1 forwards normal;
   display: block;
 }
+.popup,
 #add-category,
 #import-category {
   padding: 10px !important;
@@ -33,13 +37,14 @@
   max-height: 600px;
   height: auto;
   background: var(--white);
-  z-index: 20;
+  z-index: 10001;
   overflow-y: auto;
   opacity: 0;
   /* animation: animate-modal-close 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
     0ms 1 forwards normal; */
   display: none;
 }
+.popup.active,
 #import-category.active,
 #add-category.active {
   display: block;
@@ -112,10 +117,17 @@ form textarea {
 form input[type="checkbox"]:not(:last-child) {
   margin-bottom: 10px !important;
 }
+form label .floater {
+  position: absolute;
+  right: 5px;
+  top: 35px;
+  z-index: 22;
+}
 form label,
 form textarea,
 form input:not([type="checkbox"]),
 form select {
+  position: relative;
   width: 100%;
 }
 form textarea:focus,
