@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add Category Modal</title>
+    <title>Gift Card</title>
 
     <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="../Category/modal.css" />
     <link rel="stylesheet" href="../Components/header.css" />
     <link rel="stylesheet" href="../Components/sidebar.css" />
-    <link rel="stylesheet" href="./modal.css" />
 
     <!-- Library -->
     <link
@@ -467,13 +467,13 @@
         class="container-fluid mx-auto p-0 d-flex justify-content-center align-items-center"
       >
         <!-- <div class="controller">
-            <button
-              class="primary-outline btn-30 rounded-corner-lg"
-              id="control-btn"
-            >
-              <i class="fas fa-arrow-right"></i>
-            </button>
-          </div> -->
+              <button
+                class="primary-outline btn-30 rounded-corner-lg"
+                id="control-btn"
+              >
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div> -->
         <div class="row fluid-width">
           <!-- Default Links -->
           <ul class="nav-links fluid-width mb-0">
@@ -720,21 +720,15 @@
 
     <!-- Main -->
     <main>
-      <!-- Section Category -->
-      <section class="category fluid-width">
+      <!-- Section Gift Card -->
+      <section class="gift-card fluid-width">
         <!-- Section Controller -->
         <div class="section-controller fluid-width">
           <button
             class="primary-solid rounded-corner-sm px-3 py-2 btn-shadow"
-            id="open-add-category-modal"
+            id="open-add-gift-card-modal"
           >
-            Add Category
-          </button>
-          <button
-            class="secondary-solid rounded-corner-sm px-3 py-2 btn-shadow"
-            id="open-import-category-modal"
-          >
-            Import Category
+            Add Gift Card
           </button>
         </div>
         <!-- Section Controller -->
@@ -772,21 +766,22 @@
           <!-- Table -->
           <div class="table-responsive">
             <table class="table">
-              <thead class="text-nowrap">
+              <thead>
                 <tr>
                   <th scope="col">
                     <input
                       type="checkbox"
                       name="table-content-selector"
-                      id="table-content-selector"
+                      id="table-content-select"
                     />
                   </th>
-                  <th scope="col">Image</th>
-                  <th scope="col">Category</th>
-                  <th scope="col">Parent Category</th>
-                  <th scope="col">Number of Product</th>
-                  <th scope="col">Stock Qauntity</th>
-                  <th scope="col">Stock Worth (Price/Cost)</th>
+                  <th scope="col">Card No</th>
+                  <th scope="col">Customer</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Expense</th>
+                  <th scope="col">Balance</th>
+                  <th scope="col">Created By</th>
+                  <th scope="col">Expired Date</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
@@ -799,18 +794,13 @@
                       id="content-select"
                     />
                   </td>
-                  <td>
-                    <img
-                      src="https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </td>
-                  <td>Electronics</td>
-                  <td>N/A</td>
-                  <td>5</td>
-                  <td>10</td>
-                  <td>INR 1299 / INR 1199</td>
+                  <td>19824120471234123</td>
+                  <td>Customer #1</td>
+                  <td>100</td>
+                  <td>20</td>
+                  <td>80</td>
+                  <td>Admin</td>
+                  <td><span class="badge bg-danger">01-01-2023</span></td>
                   <td>
                     <div class="action-controller">
                       <button
@@ -834,18 +824,13 @@
                       id="content-select"
                     />
                   </td>
-                  <td>
-                    <img
-                      src="https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </td>
-                  <td>Electronics</td>
-                  <td>N/A</td>
-                  <td>5</td>
-                  <td>10</td>
-                  <td>INR 1299 / INR 1199</td>
+                  <td>19824120471234123</td>
+                  <td>Customer #1</td>
+                  <td>100</td>
+                  <td>20</td>
+                  <td>80</td>
+                  <td>Admin</td>
+                  <td><span class="badge bg-danger">01-01-2023</span></td>
                   <td>
                     <div class="action-controller">
                       <button
@@ -860,6 +845,17 @@
                       </button>
                     </div>
                   </td>
+                </tr>
+                <tr class="total outline">
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td>200</td>
+                  <td>160</td>
+                  <td>40</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>
@@ -903,21 +899,17 @@
         <!-- Section Content -->
 
         <!-- Modal -->
-        <!-- Add Category -->
-        <div
-          class="add-category-modal custom-modal"
-          id="add-category"
-          data-toggle="false"
-        >
-          <div class="container-fluid mx-auto">
+        <!-- Add Gift Card -->
+        <div class="popup" id="add-gift-card" data-toggle="false">
+          <div class="container-fluid mx-auto p-0">
             <!-- Modal Metadata and controller -->
             <div class="row">
               <div class="col-10">
-                <h4 class="modal-title">Add Category</h4>
+                <h4 class="modal-title">Add Gift Card</h4>
               </div>
               <div class="col-2 text-end">
                 <button
-                  id="close-category-modal"
+                  id="close-add-gift-card-modal"
                   class="btn-rounded-md primary-solid btn-shadow"
                 >
                   <i class="fas fa-xmark"></i>
@@ -936,269 +928,118 @@
 
             <!-- Modal Content -->
             <div class="row mt-3">
-              <form id="add-category-form">
+              <form id="add-coupon-form">
                 <div class="container-fluid mx-auto p-0">
                   <div class="row">
-                    <!-- Name -->
-                    <div class="col-12 col-sm-6 p-2">
-                      <label for="name">
-                        <span class="label"
-                          >Name <span class="marked">*</span></span
-                        >
-                        <input type="text" name="name" id="name" required />
-                      </label>
-                    </div>
-                    <!-- Name -->
-
-                    <!-- Meta Title -->
-                    <div class="col-12 col-sm-6 p-2">
-                      <label for="meta-title">
-                        <span class="label"
-                          >Meta Title <span class="marked">*</span></span
-                        >
-                        <input
-                          type="text"
-                          name="meta-title"
-                          id="meta-title"
-                          required
-                        />
-                      </label>
-                    </div>
-                    <!-- Meta Title -->
-
-                    <!-- Icon Set -->
-                    <div class="col-12 col-sm-6 p-2">
-                      <label for="icon-selector">
-                        <span class="label"
-                          >Icon <span class="marked">*</span></span
-                        >
-                        <select name="icon" id="icon-selector" required>
-                          <option value="-" selected disabled>
-                            Select Icon
-                          </option>
-                          <option value="fas fa-home">Home</option>
-                          <option value="fas fa-xmark">Times</option>
-                          <option value="fas fa-chartline">Chart Line</option>
-                        </select>
-                      </label>
-                    </div>
-                    <!-- Icon Set -->
-
-                    <!-- Meta Keywords -->
-                    <div class="col-12 col-sm-6 p-2">
-                      <label for="meta-keywords">
-                        <span class="label"
-                          >Meta Keywords <span class="marked">*</span></span
-                        >
-                        <input
-                          type="text"
-                          name="meta-keywords"
-                          id="meta-keywords"
-                          required
-                        />
-                      </label>
-                    </div>
-                    <!-- Meta Keywords -->
-
-                    <!-- Image -->
-                    <div class="col-12 col-sm-12 p-2">
-                      <label for="image">
-                        <span class="label"
-                          >Image <span class="marked">*</span></span
-                        >
-                        <input
-                          type="file"
-                          name="image"
-                          id="image"
-                          accept="img/png, img/jpeg"
-                          required
-                        />
-                      </label>
-                    </div>
-                    <!-- Image -->
-
-                    <!-- Meta Description -->
-                    <div class="col-12 col-sm-12 p-2">
-                      <label for="meta-description">
-                        <span class="label"
-                          >Meta Description <span class="marked">*</span></span
-                        >
-                        <textarea
-                          name="meta-description"
-                          id="meta-description"
-                          required
-                        ></textarea>
-                      </label>
-                    </div>
-                    <!-- Meta Description -->
-
-                    <!-- Parent Category -->
+                    <!-- generate Gift Card No / Gift Card No -->
                     <div class="col-12 p-2">
-                      <label for="parent-category">
+                      <label for="gift_card_no">
                         <span class="label"
-                          >Parent Category <span class="marked">*</span></span
+                          >Card No <span class="marked">*</span></span
+                        >
+                        <button
+                          type="button"
+                          class="secondary-solid rounded-corner-sm px-2 floater btn-shadow"
+                        >
+                          Generate
+                        </button>
+                        <input
+                          type="text"
+                          name="gift_card_no"
+                          id="gift_card_no"
+                          required
+                          aria-required="true"
+                        />
+                      </label>
+                    </div>
+                    <!-- generate Gift Card No / Gift Card No -->
+
+                    <!-- Amount -->
+                    <div class="col-12 col-sm-6 p-2">
+                      <label for="amount">
+                        <span class="label"
+                          >Amount <span class="marked">*</span></span
+                        >
+                        <!-- <span class="secondary-default floater">%</span> -->
+                        <input
+                          type="text"
+                          name="amount"
+                          id="amount"
+                          required
+                          aria-required="true"
+                        />
+                      </label>
+                    </div>
+                    <!-- Amount -->
+
+                    <!-- Customer List -->
+                    <div class="col-12 col-sm-6 p-2">
+                      <label for="customer-list">
+                        <span class="label"
+                          >Customer <span class="marked">*</span></span
                         >
                         <select
-                          name="parent-category"
-                          id="parent-category"
+                          name="customer-list"
+                          id="customer-list"
                           required
+                          aria-required="true"
                         >
-                          <option value="0" selected disabled>
-                            Select parent category
+                          <option value="-" selected disabled>
+                            Select Customer
                           </option>
-                          <option value="123">Electronics</option>
-                          <option value="124">Mobiles</option>
+                          <option value="1">Customer 1</option>
+                          <option value="2">Customer 2</option>
+                          <option value="3">Customer 3</option>
                         </select>
                       </label>
                     </div>
-                    <!-- Parent Category -->
+                    <!-- Customer List -->
 
-                    <!-- Highlight In -->
+                    <!-- Expired Date -->
                     <div class="col-12 p-2">
-                      <label for="highlight-category">
-                        <span class="label mb-2 d-block"
-                          >Highlight In <span class="marked">*</span></span
-                        >
-                        <label
-                          for="top-category"
-                          class="d-flex justify-content-start align-items-center"
-                        >
-                          <input
-                            type="checkbox"
-                            name="top-category"
-                            id="top-category"
-                            value="top-category"
-                            class="me-2"
-                          />
-                          Top Category
-                        </label>
-                        <label
-                          for="special-category"
-                          class="d-flex justify-content-start align-items-center"
-                        >
-                          <input
-                            type="checkbox"
-                            name="special-category"
-                            id="special-category"
-                            value="special-category"
-                            class="me-2"
-                          />
-                          Special Category
-                        </label>
-                      </label>
-                    </div>
-                    <!-- Highlight In -->
-
-                    <!-- Form Submit Button -->
-                    <div class="col-12 p-2 mt-3">
-                      <button
-                        class="fluid-width btn-shadow primary-solid rounded-corner-lg px-3 py-2"
-                      >
-                        Submit
-                      </button>
-                    </div>
-                    <!-- Form Submit Button -->
-                  </div>
-                </div>
-              </form>
-            </div>
-            <!-- Modal Content -->
-          </div>
-        </div>
-        <div class="overlay" id="add-category-overlay"></div>
-        <!-- Add Category -->
-
-        <!-- Import Category -->
-        <div
-          class="import-category-modal custom-modal"
-          id="import-category"
-          data-toggle="false"
-        >
-          <div class="container-fluid mx-auto">
-            <!-- Modal Metadata and controller -->
-            <div class="row">
-              <div class="col-10">
-                <h4 class="modal-title">Import Category</h4>
-              </div>
-              <div class="col-2 text-end">
-                <button
-                  id="close-import-category-modal"
-                  class="btn-rounded-md primary-solid btn-shadow"
-                >
-                  <i class="fas fa-xmark"></i>
-                </button>
-              </div>
-              <div class="col-12">
-                <span class="note"
-                  ><i
-                    >The field label marked with
-                    <span class="marked">*</span> are required fields.</i
-                  ></span
-                >
-              </div>
-              <div class="col-12">
-                <span class="note">
-                  The correct column order is (name<span class="marked">*</span
-                  >, parent_category) and you must follow this.
-                </span>
-              </div>
-            </div>
-            <!-- Modal Metadata and controller -->
-
-            <!-- Modal Content -->
-            <div class="row mt-3">
-              <form id="import-category-form">
-                <div class="container-fluid mx-auto p-0">
-                  <div class="row">
-                    <!-- Upload csv file -->
-                    <div class="col-12 col-sm-6 p-2">
-                      <label for="upload_file">
+                      <label for="expired_date">
                         <span class="label"
-                          >Upload CSV File <span class="marked">*</span></span
+                          >Expired Date <span class="marked">*</span></span
                         >
                         <input
-                          type="file"
-                          name="upload_file"
-                          id="upload_file"
+                          type="date"
+                          name="expired_date"
+                          id="expired_date"
+                          required
+                          aria-required="true"
                         />
                       </label>
                     </div>
-                    <!-- Upload csv file -->
+                    <!-- Expired Date -->
 
-                    <!-- sample file -->
-                    <div class="col-12 col-sm-6 p-2">
-                      <label for="label">
-                        <span class="label">Sample File</span>
-                      </label>
-                      <a
-                        class="btn-shadow rounded-corner-sm secondary-solid px-3 py-2 fluid-width d-flex justify-content-center align-items-center"
-                        download
-                        href="#sample"
-                        style="
-                          display: block;
-                          color: var(--white) !important;
-                          font-size: 12px;
-                          height: 38px;
-                          margin-top: 3px !important;
-                          outline: 1px solid var(--secondary);
-                        "
-                      >
-                        <i class="fas fa-download me-1"></i>
-                        Download
-                      </a>
-                    </div>
-                    <!-- sample file -->
-
-                    <!-- Submit Form -->
+                    <!-- Highlight In -->
                     <div class="col-12 p-2">
+                      <label for="user_list">
+                        <span class="label mb-2 d-block"
+                          >User List <span class="marked">*</span></span
+                        >
+                        <input
+                          type="checkbox"
+                          name="user_list"
+                          id="user_list"
+                          value="user_list"
+                          class="me-2"
+                        />
+                        User List
+                      </label>
+                    </div>
+                    <!-- Highlight In -->
+
+                    <!-- Submit Button -->
+                    <div class="col-12 p-2 mt-3">
                       <button
-                        class="primary-solid btn-shadow rounded-corner-sm px-3 py-2 fluid-width mt-3"
                         type="submit"
+                        class="primary-solid btn-shadow rounded-corner-sm px-3 py-2 fluid-width"
                       >
                         Submit
                       </button>
                     </div>
-                    <!-- Submit Form -->
+                    <!-- Submit Button -->
                   </div>
                 </div>
               </form>
@@ -1206,18 +1047,18 @@
             <!-- Modal Content -->
           </div>
         </div>
-        <div class="overlay" id="import-category-overlay"></div>
-        <!-- Import Category -->
+        <div class="popup-overlay" id="add-gift-card-overlay"></div>
+        <!-- Add Gift Card -->
         <!-- Modal -->
       </section>
-      <!-- Section Category -->
+      <!-- Section Gift Card -->
     </main>
     <!-- Main -->
 
     <script src="../common.js"></script>
     <script>
-      // function to toggle add-category-modal
-      function toggleAddCategoryModal(modalID, overlayID) {
+      // Function toggle modal and overlay
+      function toggleModal(modalID, overlayID) {
         let overlay = $(overlayID);
         let modal = $(modalID);
 
@@ -1231,19 +1072,14 @@
           overlay.classList.remove("active");
         }
       }
-      // #open-add-category-modal is use to trigger add-category-modal for demo use
-      $("button#open-add-category-modal").onclick = () => {
-        toggleAddCategoryModal("#add-category", "#add-category-overlay");
-      };
-      $("button#open-import-category-modal").onclick = () => {
-        toggleAddCategoryModal("#import-category", "#import-category-overlay");
-      };
-      $("button#close-category-modal").onclick = () => {
-        toggleAddCategoryModal("#add-category", "#add-category-overlay");
-      };
-      $("button#close-import-category-modal").onclick = () => {
-        toggleAddCategoryModal("#import-category", "#import-category-overlay");
-      };
+
+      // Event listener toggling modal
+      //  Open
+      $("#open-add-gift-card-modal").onclick = () =>
+        toggleModal("#add-gift-card", "#add-gift-card-overlay");
+      // Close
+      $("#close-add-gift-card-modal").onclick = () =>
+        toggleModal("#add-gift-card", "#add-gift-card-overlay");
     </script>
   </body>
 </html>
