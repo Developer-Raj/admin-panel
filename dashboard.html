@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gift Card</title>
-
-    <link rel="stylesheet" href="../common.css" />
-    <link rel="stylesheet" href="../Category/modal.css" />
-    <link rel="stylesheet" href="../Components/header.css" />
-    <link rel="stylesheet" href="../Components/sidebar.css" />
-
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./Components/header.css" />
+    <link rel="stylesheet" href="./Components/sidebar.css" />
     <!-- Library -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -196,8 +193,8 @@
                   <!-- Default Links -->
                   <ul class="nav-links mt-2">
                     <li>
-                      <a href="../dashboard.html">
-                        <i class="fas fa-chart-line me-2"></i>Dashboard</a
+                      <a href="./dashboard.html"
+                        ><i class="fas fa-chart-line me-2"></i>Dashboard</a
                       >
                     </li>
                   </ul>
@@ -478,7 +475,7 @@
           <!-- Default Links -->
           <ul class="nav-links fluid-width mb-0">
             <li>
-              <a href="../dashboard.html">
+              <a href="./dashboard.html">
                 <i class="fas fa-chart-line me-2"></i>Dashboard</a
               >
             </li>
@@ -723,169 +720,204 @@
     <!-- Sidebar -->
 
     <!-- Main -->
-    <main>
-      <!-- Section Delivery -->
-      <section class="delivery-list fluid-width">
+    <main class="bg-light">
+      <section class="dashboard fluid-width">
+        <!-- Section Title -->
         <h3
           class="section-title"
           style="font-weight: 600; font-family: 'Work Sans', sans-serif"
         >
-          Delivery List
+          Dashboard
         </h3>
+        <!-- Section Title -->
+
         <!-- Section Content -->
-        <div class="section-content mt-3">
-          <!-- Table Controller -->
-          <div class="table-controller mb-3 fluid-width text-end">
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button
-                type="button"
-                class="btn btn-sm primary-solid btn-warning px-2 py-1"
-              >
-                PDF
-              </button>
-              <button
-                type="button"
-                class="btn btn-sm primary-solid px-2 py-1 btn-primary"
-              >
-                CSV
-              </button>
-              <button type="button" class="btn btn-sm btn-info px-2 py-1">
-                Print
-              </button>
-              <button
-                type="button"
-                class="btn btn-sm primary-solid px-2 py-1 btn-danger"
-              >
-                Delete
-              </button>
+        <div class="container-fluid mx-auto">
+          <!-- Dashboard Cards -->
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+              <div class="dashboard-card">
+                <i class="icon fas fa-cart-shopping"></i>
+                <span class="card-label">All Orders</span>
+                <span class="counter">199</span>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+              <div class="dashboard-card">
+                <i class="icon fas fa-bag-shopping"></i>
+                <span class="card-label">Total Sale</span>
+                <span class="counter">199</span>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+              <div class="dashboard-card">
+                <i class="icon fas fa-box"></i>
+                <span class="card-label">Total Products</span>
+                <span class="counter">199</span>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+              <div class="dashboard-card">
+                <i class="icon fas fa-people-group"></i>
+                <span class="card-label">Total Customer</span>
+                <span class="counter">199</span>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+              <div class="dashboard-card">
+                <i class="icon fas fa-people-group"></i>
+                <span class="card-label">Active Customer</span>
+                <span class="counter">199</span>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+              <div class="dashboard-card">
+                <i class="icon fas fa-envelope"></i>
+                <span class="card-label">Total Subscribers</span>
+                <span class="counter">21</span>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+              <div class="dashboard-card">
+                <i class="icon fas fa-money-bill"></i>
+                <span class="card-label">Sale Amount In Last 7 Days</span>
+                <span class="counter">99</span>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+              <div class="dashboard-card">
+                <i class="icon fas fa-money-bill"></i>
+                <span class="card-label">Sale Amount In Last 15 Days</span>
+                <span class="counter">1923</span>
+              </div>
             </div>
           </div>
-          <!-- Table Controller -->
+          <!-- Dashboard Cards -->
 
-          <!-- Table -->
-          <div class="table-responsive">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">
-                    <input
-                      type="checkbox"
-                      name="table-content-selector"
-                      id="table-content-select"
-                    />
-                  </th>
-                  <th scope="col">Delivery Reference</th>
-                  <th scope="col">Sale Reference</th>
-                  <th scope="col">Customer</th>
-                  <th scope="col">Address</th>
-                  <th scope="col">Status</th>
-                  <th scope="col">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <input
-                      type="checkbox"
-                      name="content-selector"
-                      id="content-select"
-                    />
-                  </td>
-                  <td>dr-19824120471234123</td>
-                  <td>posr-19824120471234123</td>
-                  <td>Customer #1</td>
-                  <td>Kolkata, India</td>
-                  <td><span class="badge bg-success">Delivered</span></td>
-                  <td>
-                    <div class="action-controller">
-                      <button
-                        class="edit primary-solid px-2 py-1 btn-shadow rounded-corner-sm"
-                      >
-                        <i class="fas fa-pen-to-square"></i>
-                      </button>
-                      <button
-                        class="delete secondary-solid px-2 py-1 btn-shadow rounded-corner-sm"
-                      >
-                        <i class="fas fa-trash"></i>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      type="checkbox"
-                      name="content-selector"
-                      id="content-select"
-                    />
-                  </td>
-                  <td>dr-19824120471234123</td>
-                  <td>posr-19824120471234123</td>
-                  <td>Customer #1</td>
-                  <td>Kolkata, India</td>
-                  <td>
-                    <span class="badge bg-warning text-dark">Dispatched</span>
-                  </td>
-                  <td>
-                    <div class="action-controller">
-                      <button
-                        class="edit primary-solid px-2 py-1 btn-shadow rounded-corner-sm"
-                      >
-                        <i class="fas fa-pen-to-square"></i>
-                      </button>
-                      <button
-                        class="delete secondary-solid px-2 py-1 btn-shadow rounded-corner-sm"
-                      >
-                        <i class="fas fa-trash"></i>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- Table -->
-
-          <!-- Table Footer -->
-          <div
-            class="table-footer d-flex justify-content-between align-items-center"
-          >
-            <!-- Total Items -->
-            <span class="total-items" style="font-size: 12px; font-weight: 500"
-              >Showing 1 of 10 (12)</span
-            >
-            <!-- Total Items -->
-
-            <!-- Pagination -->
-            <div aria-label="Page navigation example">
-              <ul class="pagination pagination-sm">
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-                <li class="page-item active">
-                  <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-              </ul>
+          <!-- Dashboard Graph -->
+          <div class="row mt-3">
+            <div class="col-12 col-sm-6 p-2">
+              <div class="dashboard-graph">
+                <h5 class="label">Sale Report</h5>
+                <div class="chart" id="sale_report"></div>
+              </div>
             </div>
-            <!-- Pagination -->
+            <div class="col-12 col-sm-6 p-2">
+              <div class="dashboard-graph">
+                <h5 class="label">May 2022</h5>
+                <div class="chart" id="monthly_report"></div>
+              </div>
+            </div>
           </div>
-          <!-- Table Footer -->
+          <!-- Dashboard Graph -->
+
+          <!-- Table View -->
+          <div class="row mt-3">
+            <div class="col-12 col-sm-6 p-2">
+              <div class="table-responsive dashboard-graph">
+                <h4 class="label text-start">Latest Customers</h4>
+                <table class="table table-sm">
+                  <thead>
+                    <th scope="col">asd</th>
+                    <th scope="col">asd</th>
+                    <th scope="col">asd</th>
+                    <th scope="col">asd</th>
+                  </thead>
+                </table>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 p-2"></div>
+          </div>
+          <!-- Table View -->
         </div>
         <!-- Section Content -->
       </section>
-      <!-- Section Delivery -->
     </main>
     <!-- Main -->
 
-    <script src="../common.js"></script>
+    <!-- script -->
+    <script src="./common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- Chart -->
+    <script>
+      function renderBar() {
+        var sale_report_options = {
+          series: [
+            {
+              name: "Payment Received",
+              data: [400, 430, 448, 470, 540, 580, 1200],
+            },
+            {
+              name: "Payment Sent",
+              data: [200, 330, 448, 570, 600, 800, 900],
+            },
+          ],
+          chart: {
+            type: "bar",
+            height: 350,
+          },
+          plotOptions: {
+            bar: {
+              borderRadius: 4,
+              horizontal: false,
+            },
+          },
+          dataLabels: {
+            enabled: false,
+          },
+          xaxis: {
+            categories: [
+              "November",
+              "December",
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+            ],
+          },
+        };
+
+        var sale_report_chart = new ApexCharts(
+          document.querySelector("#sale_report"),
+          sale_report_options
+        );
+        sale_report_chart.render();
+      }
+      function renderPie() {
+        var pie_options = {
+          series: [1299, 3999, 2799],
+          labels: ["Purchase", "Revenue", "Expenses"],
+          chart: {
+            type: "pie",
+          },
+          responsive: [
+            {
+              breakpoint: 480,
+              options: {
+                chart: {
+                  width: 200,
+                },
+                legend: {
+                  position: "bottom",
+                },
+              },
+            },
+          ],
+        };
+
+        var monthly_report_chart = new ApexCharts(
+          document.querySelector("#monthly_report"),
+          pie_options
+        );
+        monthly_report_chart.render();
+      }
+      renderBar();
+      renderPie();
+    </script>
+    <!-- Chart -->
+
+    <!-- script -->
   </body>
 </html>
