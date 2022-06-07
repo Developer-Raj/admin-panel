@@ -4,23 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add Quotation</title>
-    <link rel="stylesheet" href="../common.css" />
-    <link rel="stylesheet" href="../Components/header.css" />
-    <link rel="stylesheet" href="../Components/sidebar.css" />
+    <title>Coupon</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <!-- Styles -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap -->
 
     <!-- Library -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
     <script
       src="https://kit.fontawesome.com/93bfa74b0a.js"
       crossorigin="anonymous"
@@ -32,6 +29,7 @@
     <header class="d-flex justify-content-center align-items-center outline">
       <div class="container-fluid mx-auto px-3">
         <div class="row">
+          <!-- Logo -->
           <div class="col-6">
             <div class="logo-container">
               <a href="../index.html">
@@ -43,6 +41,7 @@
               </a>
             </div>
           </div>
+          <!-- Logo -->
           <!-- Desktop View -->
           <div
             class="col-6 text-end d-flex justify-content-end align-items-center d-md-flex d-none"
@@ -55,7 +54,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i class="fas fa-server me-2"></i>Branch
+                <i class="fas fa-server me-2"></i>
               </button>
               <ul class="dropdown-menu d-menu" aria-labelledby="dLabel">
                 <li class="dropdown-item d-item">
@@ -77,7 +76,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i class="fas fa-user me-2"></i>Admin
+                <i class="fas fa-user me-2"></i>
               </button>
               <ul class="dropdown-menu d-menu" aria-labelledby="dLabel">
                 <li class="dropdown-item d-item">
@@ -96,7 +95,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i class="fas fa-earth-asia me-2"></i>Language
+                <i class="fas fa-earth-asia me-2"></i>
               </button>
               <ul class="dropdown-menu d-menu" aria-labelledby="dLabel">
                 <li class="dropdown-item d-item">
@@ -107,9 +106,26 @@
                 </li>
               </ul>
             </div>
-            <div class="action-container">
+            <div
+              class="action-container d-flex justify-content-between align-items-center"
+            >
+              <a
+                href="#pos"
+                class="primary-solid btn-shadow rounded-corner-sm text-light px-2 py-1 me-2"
+                >POS</a
+              >
+              <a
+                href="#restaurant"
+                class="primary-solid btn-shadow rounded-corner-sm text-light px-2 py-1 me-2"
+                >Restaurant</a
+              >
+              <a
+                href="#ecommerce"
+                class="primary-solid btn-shadow rounded-corner-sm text-light px-2 py-1 me-2"
+                >Ecommerce</a
+              >
               <button
-                class="btn-rounded primary-outline"
+                class="btn-rounded btn-shadow primary-outline"
                 id="fullscreen-button"
                 data-toggle="false"
               >
@@ -164,7 +180,7 @@
                   <div class="col-3">
                     <div class="action-container text-end">
                       <button
-                        class="btn-rounded primary-outline"
+                        class="btn-rounded btn-shadow primary-outline"
                         id="CloseMenu-btn"
                       >
                         <i class="fas fa-times"></i>
@@ -174,6 +190,32 @@
                   <!-- Close Menu -->
                 </div>
                 <!-- Quick Access -->
+
+                <!-- quick action -->
+                <div class="row mt-3">
+                  <div class="col-6 py-2 pe-1">
+                    <a
+                      href="#pos"
+                      class="primary-solid d-block fluid-width btn-shadow rounded-corner-sm text-light px-2 py-1 me-2"
+                      >POS</a
+                    >
+                  </div>
+                  <div class="col-6 py-2 ps-1">
+                    <a
+                      href="#restaurant"
+                      class="primary-solid d-block fluid-width btn-shadow rounded-corner-sm text-light px-2 py-1 me-2"
+                      >Restaurant</a
+                    >
+                  </div>
+                  <div class="col-12 py-2">
+                    <a
+                      href="#ecommerce"
+                      class="primary-solid d-block fluid-width btn-shadow rounded-corner-sm text-light px-2 py-1 me-2"
+                      >Ecommerce</a
+                    >
+                  </div>
+                </div>
+                <!-- quick action -->
 
                 <!-- Fullscreen Button -->
                 <div class="row mt-3">
@@ -194,8 +236,8 @@
                   <!-- Default Links -->
                   <ul class="nav-links mt-2">
                     <li>
-                      <a href="../dashboard.html">
-                        <i class="fas fa-chart-line me-2"></i>Dashboard</a
+                      <a href="./index.html"
+                        ><i class="fas fa-chart-line me-2"></i>Dashboard</a
                       >
                     </li>
                   </ul>
@@ -268,18 +310,15 @@
                                 <div class="accordion-body mt-3">
                                   <ul class="nav-links">
                                     <li>
-                                      <a
-                                        href="../Category/add-category-modal.html"
-                                        >Add Category</a
-                                      >
+                                      <a href="./category.html">Add Category</a>
                                     </li>
                                     <li>
-                                      <a href="../Category/import-category.html"
+                                      <a href="./category.html"
                                         >Import Category</a
                                       >
                                     </li>
                                     <li>
-                                      <a href="../Category/listing.html"
+                                      <a href="./category.html"
                                         >Category Listing</a
                                       >
                                     </li>
@@ -319,14 +358,10 @@
                                 <div class="accordion-body mt-3">
                                   <ul class="nav-links">
                                     <li>
-                                      <a href="../Coupons/coupon.html"
-                                        >Add Coupon</a
-                                      >
+                                      <a href="./coupon.html">Add Coupon</a>
                                     </li>
                                     <li>
-                                      <a href="../Coupons/coupon.html"
-                                        >Coupon List</a
-                                      >
+                                      <a href="./coupon.html">Coupon List</a>
                                     </li>
                                   </ul>
                                 </div>
@@ -364,12 +399,12 @@
                                 <div class="accordion-body mt-3">
                                   <ul class="nav-links">
                                     <li>
-                                      <a href="../Gc/gift-card.html"
+                                      <a href="./gift-card.html"
                                         >Gift Card list</a
                                       >
                                     </li>
                                     <li>
-                                      <a href="../Gc/gift-card.html"
+                                      <a href="./gift-card.html"
                                         >Add Gift Card</a
                                       >
                                     </li>
@@ -412,7 +447,7 @@
                                 <div class="accordion-body mt-3">
                                   <ul class="nav-links">
                                     <li>
-                                      <a href="../Delivery/delivery-list.html"
+                                      <a href="./delivery-list.html"
                                         >Delivery List</a
                                       >
                                     </li>
@@ -432,7 +467,7 @@
                   <!-- Default Links -->
                   <ul class="nav-links mt-2">
                     <li>
-                      <a href="../Quotation/add-quotation.html">
+                      <a href="./add-quotation.html">
                         <i class="fas fa-quote-left me-2"></i>Add Quotation</a
                       >
                     </li>
@@ -476,7 +511,7 @@
           <!-- Default Links -->
           <ul class="nav-links fluid-width mb-0">
             <li>
-              <a href="../dashboard.html">
+              <a href="./index.html">
                 <i class="fas fa-chart-line me-2"></i>Dashboard</a
               >
             </li>
@@ -547,19 +582,13 @@
                         <div class="accordion-body mt-3">
                           <ul class="nav-links">
                             <li>
-                              <a href="../Category/category.html"
-                                >Add Category</a
-                              >
+                              <a href="./category.html">Add Category</a>
                             </li>
                             <li>
-                              <a href="../Category/category.html"
-                                >Import Category</a
-                              >
+                              <a href="./category.html">Import Category</a>
                             </li>
                             <li>
-                              <a href="../Category/category.html"
-                                >Category Listing</a
-                              >
+                              <a href="./category.html">Category Listing</a>
                             </li>
                           </ul>
                         </div>
@@ -597,10 +626,10 @@
                         <div class="accordion-body mt-3">
                           <ul class="nav-links">
                             <li>
-                              <a href="../Coupons/coupon.html">Add Coupon</a>
+                              <a href="./coupon.html">Add Coupon</a>
                             </li>
                             <li>
-                              <a href="../Coupons/coupon.html">Coupon List</a>
+                              <a href="./coupon.html">Coupon List</a>
                             </li>
                           </ul>
                         </div>
@@ -638,12 +667,10 @@
                         <div class="accordion-body mt-3">
                           <ul class="nav-links">
                             <li>
-                              <a href="../Gc/gift-card.html">Add Gift Card</a>
+                              <a href="./gift-card.html">Add Gift Card</a>
                             </li>
                             <li>
-                              <a href="../Gc/gift-card.html"
-                                >Gift Card Listing</a
-                              >
+                              <a href="./gift-card.html">Gift Card Listing</a>
                             </li>
                           </ul>
                         </div>
@@ -681,9 +708,7 @@
                         <div class="accordion-body mt-3">
                           <ul class="nav-links">
                             <li>
-                              <a href="../Delivery/delivery-list.html"
-                                >Delivery List</a
-                              >
+                              <a href="./delivery-list.html">Delivery List</a>
                             </li>
                           </ul>
                         </div>
@@ -701,8 +726,23 @@
           <!-- Default Links -->
           <ul class="nav-links fluid-width mt-0">
             <li>
-              <a href="../Quotation/add-quotation.html">
+              <a href="./add-quotation.html">
                 <i class="fas fa-quote-left me-2"></i>Add Quotation</a
+              >
+            </li>
+            <li>
+              <a href="./products-list.html">
+                <i class="fas fa-box me-2"></i>Products</a
+              >
+            </li>
+            <li>
+              <a href="./purchase-list.html">
+                <i class="fas fa-money-bill me-2"></i>Purchase</a
+              >
+            </li>
+            <li>
+              <a href="./sale.html">
+                <i class="fas fa-money-bill me-2"></i>Sales</a
               >
             </li>
             <li>
@@ -721,436 +761,357 @@
     <!-- Sidebar -->
 
     <!-- Main -->
-    <main class="bg-light">
-      <section class="add-quotation p-2">
-        <!-- Section Title -->
-        <h3
-          class="section-title"
-          style="font-weight: 600; font-family: 'Work Sans', sans-serif"
-        >
-          Add Quotation
-        </h3>
-        <!-- Section Title -->
+    <main>
+      <!-- Section Coupon -->
+      <section class="coupon fluid-width">
+        <!-- Section Controller -->
+        <div class="section-controller fluid-width">
+          <button
+            class="primary-solid rounded-corner-sm px-3 py-2 btn-shadow"
+            id="open-add-coupon-modal"
+          >
+            Add Coupon
+          </button>
+        </div>
+        <!-- Section Controller -->
 
         <!-- Section Content -->
         <div class="section-content mt-3">
-          <form id="add-quotation-form fluid-width fluid-height">
-            <div class="container-fluid mx-auto p-0">
-              <!-- Basic Data -->
-              <div class="row bg-body shadow-sm rounded p-3 mb-3">
-                <!-- Note -->
-                <div class="col-12 mb-3">
-                  <span class="note"
-                    >This field labels marked with
-                    <span class="marked">*</span> are required input
-                    fields</span
-                  >
-                </div>
-                <!-- Note -->
-
-                <!-- Biller -->
-                <div class="col-12 col-sm-6 p-2">
-                  <label for="biller">
-                    <span class="label"
-                      >Biller <span class="marked">*</span></span
-                    >
-                    <input
-                      type="text"
-                      name="biller"
-                      id="biller"
-                      required
-                      aria-required="true"
-                    />
-                  </label>
-                </div>
-                <!-- Biller -->
-
-                <!-- Supplier -->
-                <div class="col-12 col-sm-6 p-2">
-                  <label for="supplier">
-                    <span class="label">Supplier</span>
-                    <select name="supplier" id="supplier" aria-required="false">
-                      <option
-                        value="0"
-                        selected
-                        aria-selected="true"
-                        disabled
-                        aria-disabled="true"
-                      >
-                        Select Supplier
-                      </option>
-                      <option
-                        value="Supplier 1"
-                        aria-selected="false"
-                        aria-disabled="false"
-                      >
-                        Supplier 1
-                      </option>
-                      <option
-                        value="Supplier 2"
-                        aria-selected="false"
-                        aria-disabled="false"
-                      >
-                        Supplier 2
-                      </option>
-                    </select>
-                  </label>
-                </div>
-                <!-- Supplier -->
-
-                <!-- Customer -->
-                <div class="col-12 col-sm-6 p-2">
-                  <label for="customer">
-                    <span class="label"
-                      >Customer <span class="marked">*</span></span
-                    >
-                    <select
-                      name="customer"
-                      id="customer"
-                      aria-required="true"
-                      required
-                    >
-                      <option
-                        value="0"
-                        selected
-                        aria-selected="true"
-                        disabled
-                        aria-disabled="true"
-                      >
-                        Select Customer
-                      </option>
-                      <option
-                        value="Customer 1"
-                        aria-selected="false"
-                        aria-disabled="false"
-                      >
-                        Customer 1
-                      </option>
-                      <option
-                        value="Customer 2"
-                        aria-selected="false"
-                        aria-disabled="false"
-                      >
-                        Customer 2
-                      </option>
-                    </select>
-                  </label>
-                </div>
-                <!-- Customer -->
-
-                <!-- Warehouse -->
-                <div class="col-12 col-sm-6 p-2">
-                  <label for="warehouse">
-                    <span class="label"
-                      >Warehouse <span class="marked">*</span></span
-                    >
-                    <select
-                      name="warehouse"
-                      id="warehouse"
-                      aria-required="true"
-                      required
-                    >
-                      <option
-                        value="0"
-                        selected
-                        aria-selected="true"
-                        disabled
-                        aria-disabled="true"
-                      >
-                        Select Warehouse
-                      </option>
-                      <option
-                        value="Warehouse 1"
-                        aria-selected="false"
-                        aria-disabled="false"
-                      >
-                        Warehouse 1
-                      </option>
-                      <option
-                        value="Warehouse 2"
-                        aria-selected="false"
-                        aria-disabled="false"
-                      >
-                        Warehouse 2
-                      </option>
-                    </select>
-                  </label>
-                </div>
-                <!-- Warehouse -->
-
-                <!-- Select Product Code -->
-                <div class="col-12 p-2">
-                  <label for="product_code">
-                    <span class="label">Select Product</span>
-                    <select
-                      name="product_code"
-                      id="product_code"
-                      aria-required="false"
-                    >
-                      <option
-                        value="0"
-                        selected
-                        aria-selected="true"
-                        disabled
-                        aria-disabled="true"
-                      >
-                        Select Product Code
-                      </option>
-                      <option
-                        value="Product Code 1"
-                        aria-selected="false"
-                        aria-disabled="false"
-                      >
-                        Product 1
-                      </option>
-                      <option
-                        value="Product Code 2"
-                        aria-selected="false"
-                        aria-disabled="false"
-                      >
-                        Product 2
-                      </option>
-                    </select>
-                  </label>
-                </div>
-                <!-- Select Product Code -->
-              </div>
-              <!-- Basic Data -->
-
-              <!-- Order Table -->
-              <div class="row bg-body shadow-sm rounded p-3 mb-3">
-                <!-- Row Header -->
-                <div class="col-12 p-2">
-                  <h6 class="row-header">
-                    Order Table <span class="marked">*</span>
-                  </h6>
-                </div>
-                <!-- Row Header -->
-
-                <!-- Table -->
-                <div class="col-12 p-2">
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="col">Name</th>
-                          <th scope="col">Code</th>
-                          <th scope="col">Qty</th>
-                          <th scope="col">Net Unit Price</th>
-                          <th scope="col">Discount</th>
-                          <th scope="col">Tax</th>
-                          <th scope="col">Sub Total</th>
-                          <th scope="col">Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            Product 1
-                            <button class="secondary-default" type="button">
-                              <i class="fas fa-pen-to-square"></i>
-                            </button>
-                          </td>
-                          <td>1230</td>
-                          <td>2</td>
-                          <td>400.00</td>
-                          <td>0.00</td>
-                          <td>20.00</td>
-                          <td>820.00</td>
-                          <td>
-                            <div class="action-controller">
-                              <button
-                                type="button"
-                                class="delete bg-danger secondary-solid px-2 py-1 btn-shadow rounded-corner-sm"
-                              >
-                                <i class="fas fa-trash"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Product 2
-                            <button class="secondary-default" type="button">
-                              <i class="fas fa-pen-to-square"></i>
-                            </button>
-                          </td>
-                          <td>1230</td>
-                          <td>2</td>
-                          <td>400.00</td>
-                          <td>0.00</td>
-                          <td>20.00</td>
-                          <td>820.00</td>
-                          <td>
-                            <div class="action-controller">
-                              <button
-                                type="button"
-                                class="delete bg-danger secondary-solid px-2 py-1 btn-shadow rounded-corner-sm"
-                              >
-                                <i class="fas fa-trash"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="total outline">
-                          <td>Total</td>
-                          <td></td>
-                          <td>2</td>
-                          <td></td>
-                          <td>0.00</td>
-                          <td>40.00</td>
-                          <td>1640.00</td>
-                          <td></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <!-- Table -->
-
-                <!-- Order Tax -->
-                <div class="col-12 col-sm-4 p-2">
-                  <label for="order-tax">
-                    <span class="label">Order Tax</span>
-                    <select
-                      name="order-tax"
-                      id="order-tax"
-                      aria-required="false"
-                    >
-                      <option
-                        value="0"
-                        selected
-                        aria-selected="true"
-                        disabled
-                        aria-disabled="true"
-                        label="select tax"
-                        aria-label="select order tax"
-                      >
-                        Select Order Tax
-                      </option>
-                      <option
-                        value="1"
-                        aria-selected="false"
-                        aria-disabled="false"
-                        label="No Tax"
-                        aria-label="No Tax"
-                      >
-                        No Tax
-                      </option>
-                    </select>
-                  </label>
-                </div>
-                <!-- Order Tax -->
-
-                <!-- Order Discount -->
-                <div class="col-12 col-sm-4 p-2">
-                  <label for="order-discount">
-                    <span class="label">Order Discount</span>
-                    <input
-                      type="text"
-                      name="order-discount"
-                      id="order-discount"
-                      aria-label="order discount"
-                      aria-required="false"
-                    />
-                  </label>
-                </div>
-                <!-- Order Discount -->
-
-                <!-- Order Discount -->
-                <div class="col-12 col-sm-4 p-2">
-                  <label for="shipping-cost">
-                    <span class="label">Shipping Cost</span>
-                    <input
-                      type="text"
-                      name="shipping-cost"
-                      id="shipping-cost"
-                      aria-label="shipping cost"
-                      aria-required="false"
-                    />
-                  </label>
-                </div>
-                <!-- Order Discount -->
-
-                <!-- Status -->
-                <div class="col-12 col-sm-6 p-2">
-                  <label for="status">
-                    <span class="label">Status</span>
-                    <select name="status" id="status" aria-required="false">
-                      <option
-                        value="0"
-                        label="select status"
-                        aria-label="select status"
-                        selected
-                        disabled
-                        aria-selected="true"
-                        aria-disabled="true"
-                      >
-                        Select Status
-                      </option>
-                      <option
-                        value="1"
-                        label="Pending"
-                        aria-label="Pending"
-                        aria-selected="false"
-                        aria-disabled="false"
-                      >
-                        Pending
-                      </option>
-                    </select>
-                  </label>
-                </div>
-                <!-- Status -->
-
-                <!-- Attach File -->
-                <div class="col-12 col-sm-6 p-2">
-                  <label for="attach_file">
-                    <span class="label">Attach File</span>
-                    <input
-                      type="file"
-                      name="Attach File"
-                      id="attach_file"
-                      aria-label="attach file"
-                    />
-                  </label>
-                </div>
-                <!-- Attach File -->
-
-                <!-- Note -->
-                <div class="col-12 p-2">
-                  <label for="note">
-                    <span class="label">Note</span>
-                    <textarea
-                      name="note"
-                      id="note"
-                      aria-label="note"
-                    ></textarea>
-                  </label>
-                </div>
-                <!-- Note -->
-
-                <!-- Submit Button -->
-                <div class="col-12 col-sm-3 p-2">
-                  <button
-                    class="secondary-solid btn-shadow rounded-corner-sm px-3 py-2 fluid-width"
-                    type="submit"
-                  >
-                    Submit
-                  </button>
-                </div>
-                <!-- Submit Button -->
-              </div>
-              <!-- Order Table -->
+          <!-- Table Controller -->
+          <div class="table-controller mb-3 fluid-width text-end">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button
+                type="button"
+                class="btn btn-sm primary-solid btn-warning px-2 py-1"
+              >
+                PDF
+              </button>
+              <button
+                type="button"
+                class="btn btn-sm primary-solid px-2 py-1 btn-primary"
+              >
+                CSV
+              </button>
+              <button type="button" class="btn btn-sm btn-info px-2 py-1">
+                Print
+              </button>
+              <button
+                type="button"
+                class="btn btn-sm primary-solid px-2 py-1 btn-danger"
+              >
+                Delete
+              </button>
             </div>
-          </form>
+          </div>
+          <!-- Table Controller -->
+
+          <!-- Table -->
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <input
+                      type="checkbox"
+                      name="table-content-selector"
+                      id="table-content-select"
+                    />
+                  </th>
+                  <th scope="col">Coupon Code</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Min Amount</th>
+                  <th scope="col">Qty</th>
+                  <th scope="col">Availability</th>
+                  <th scope="col">Expired Date</th>
+                  <th scope="col">Created By</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input
+                      type="checkbox"
+                      name="content-selector"
+                      class="content-selector"
+                    />
+                  </td>
+                  <td>HDFC800</td>
+                  <td><span class="badge bg-primary">fixed</span></td>
+                  <td>1100</td>
+                  <td>599</td>
+                  <td>80</td>
+                  <td><span class="badge bg-success">12</span></td>
+                  <td><span class="badge bg-danger">1-06-2022</span></td>
+                  <td>Admin</td>
+                  <td>
+                    <div class="action-controller">
+                      <button
+                        class="edit primary-solid px-2 py-1 btn-shadow rounded-corner-sm"
+                      >
+                        <i class="fas fa-pen-to-square"></i>
+                      </button>
+                      <button
+                        class="delete secondary-solid px-2 py-1 btn-shadow rounded-corner-sm"
+                      >
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="checkbox"
+                      name="content-selector"
+                      class="content-selector"
+                    />
+                  </td>
+                  <td>HDFC800</td>
+                  <td><span class="badge bg-primary">fixed</span></td>
+                  <td>1100</td>
+                  <td>599</td>
+                  <td>80</td>
+                  <td><span class="badge bg-success">12</span></td>
+                  <td><span class="badge bg-danger">1-06-2022</span></td>
+                  <td>Admin</td>
+                  <td>
+                    <div class="action-controller">
+                      <button
+                        class="edit primary-solid px-2 py-1 btn-shadow rounded-corner-sm"
+                      >
+                        <i class="fas fa-pen-to-square"></i>
+                      </button>
+                      <button
+                        class="delete secondary-solid px-2 py-1 btn-shadow rounded-corner-sm"
+                      >
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Table -->
+
+          <!-- Table Footer -->
+          <div
+            class="table-footer d-flex justify-content-between align-items-center"
+          >
+            <!-- Total Items -->
+            <span class="total-items" style="font-size: 12px; font-weight: 500"
+              >Showing 1 of 10 (12)</span
+            >
+            <!-- Total Items -->
+
+            <!-- Pagination -->
+            <div aria-label="Page navigation example">
+              <ul class="pagination pagination-sm">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Pagination -->
+          </div>
+          <!-- Table Footer -->
         </div>
         <!-- Section Content -->
+
+        <!-- Modal -->
+        <!-- Add Coupon -->
+        <div class="popup" id="add-coupon" data-toggle="false">
+          <div class="container-fluid mx-auto p-0">
+            <!-- Modal Metadata and controller -->
+            <div class="row">
+              <div class="col-10">
+                <h4 class="modal-title">Add Coupon</h4>
+              </div>
+              <div class="col-2 text-end">
+                <button
+                  id="close-add-coupon-modal"
+                  class="btn-rounded-md primary-solid btn-shadow"
+                >
+                  <i class="fas fa-xmark"></i>
+                </button>
+              </div>
+              <div class="col-12">
+                <span class="note"
+                  ><i
+                    >The field label marked with
+                    <span class="marked">*</span> are required fields.</i
+                  ></span
+                >
+              </div>
+            </div>
+            <!-- Modal Metadata and controller -->
+
+            <!-- Modal Content -->
+            <div class="row mt-3">
+              <form id="add-coupon-form">
+                <div class="container-fluid mx-auto p-0">
+                  <div class="row">
+                    <!-- generate coupon code / coupon code -->
+                    <div class="col-12 p-2">
+                      <label for="coupon_code">
+                        <span class="label"
+                          >Coupon Code <span class="marked">*</span></span
+                        >
+                        <button
+                          type="button"
+                          class="secondary-solid rounded-corner-sm px-2 floater btn-shadow"
+                        >
+                          Generate
+                        </button>
+                        <input
+                          type="text"
+                          name="coupon_code"
+                          id="coupon_code"
+                          required
+                          aria-required="true"
+                        />
+                      </label>
+                    </div>
+                    <!-- generate coupon code / coupon code -->
+
+                    <!-- Type -->
+                    <div class="col-12 col-sm-6 p-2">
+                      <label for="type">
+                        <span class="label"
+                          >Type <span class="marked">*</span></span
+                        >
+                        <select
+                          name="type"
+                          id="type"
+                          required
+                          aria-required="true"
+                        >
+                          <option value="-" selected disabled>
+                            Select Type
+                          </option>
+                          <option value="Fixed Amount">Fixed Amount</option>
+                          <option value="Dynamic Amount">Dynamic Amount</option>
+                        </select>
+                      </label>
+                    </div>
+                    <!-- Type -->
+
+                    <!-- Amount -->
+                    <div class="col-12 col-sm-6 p-2">
+                      <label for="amount">
+                        <span class="label"
+                          >Amount <span class="marked">*</span></span
+                        >
+                        <span class="secondary-default floater">%</span>
+                        <input
+                          type="text"
+                          name="amount"
+                          id="amount"
+                          required
+                          aria-required="true"
+                        />
+                      </label>
+                    </div>
+                    <!-- Amount -->
+
+                    <!-- QTY -->
+                    <div class="col-12 col-sm-6 p-2">
+                      <label for="qty">
+                        <span class="label"
+                          >Quantity <span class="marked">*</span></span
+                        >
+                        <input
+                          type="text"
+                          name="Qauntity"
+                          id="qty"
+                          required
+                          aria-required="true"
+                        />
+                      </label>
+                    </div>
+                    <!-- QTY -->
+
+                    <!-- Expired Date -->
+                    <div class="col-12 col-sm-6 p-2">
+                      <label for="expired_date">
+                        <span class="label"
+                          >Expired Date <span class="marked">*</span></span
+                        >
+                        <input
+                          type="date"
+                          name="expired_date"
+                          id="expired_date"
+                          required
+                          aria-required="true"
+                        />
+                      </label>
+                    </div>
+                    <!-- Expired Date -->
+
+                    <!-- Submit Button -->
+                    <div class="col-12 p-2 mt-3">
+                      <button
+                        type="submit"
+                        class="primary-solid btn-shadow rounded-corner-sm px-3 py-2 fluid-width"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                    <!-- Submit Button -->
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- Modal Content -->
+          </div>
+        </div>
+        <div class="popup-overlay" id="add-coupon-overlay"></div>
+        <!-- Add Coupon -->
+        <!-- Modal -->
       </section>
+      <!-- Section Coupon -->
     </main>
     <!-- Main -->
 
-    <!-- script -->
-    <script src="../common.js"></script>
-    <!-- script -->
+    <script src="../js/common.js"></script>
+    <script>
+      // Function toggle modal and overlay
+      function toggleModal(modalID, overlayID) {
+        let overlay = $(overlayID);
+        let modal = $(modalID);
+
+        if (modal.dataset.toggle === "false") {
+          modal.dataset.toggle = "true";
+          modal.classList.add("active");
+          overlay.classList.add("active");
+        } else {
+          modal.dataset.toggle = "false";
+          modal.classList.remove("active");
+          overlay.classList.remove("active");
+        }
+      }
+
+      // Event listener toggling modal
+      //  Open
+      $("#open-add-coupon-modal").onclick = () =>
+        toggleModal("#add-coupon", "#add-coupon-overlay");
+      // Close
+      $("#close-add-coupon-modal").onclick = () =>
+        toggleModal("#add-coupon", "#add-coupon-overlay");
+    </script>
   </body>
 </html>

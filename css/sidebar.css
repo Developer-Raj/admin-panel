@@ -6,7 +6,7 @@
   background: var(--white);
   z-index: 9;
   width: 80px;
-  height: 100%;
+  height: calc(100% - 80px);
   font-size: 14px;
   transition-duration: 550ms;
   overflow-y: auto;
