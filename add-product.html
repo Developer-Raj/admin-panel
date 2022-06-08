@@ -18,10 +18,13 @@
     <!-- Bootstrap -->
 
     <!-- Library -->
-    <script
-      src="https://kit.fontawesome.com/93bfa74b0a.js"
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
       crossorigin="anonymous"
-    ></script>
+      referrerpolicy="no-referrer"
+    />
     <!-- Library -->
   </head>
   <body>
@@ -833,8 +836,590 @@
       </div>
     </div>
     <!-- Sidebar -->
-    <!-- script -->
+
+    <!-- Main -->
+    <main class="bg-light">
+      <section class="add-products p-2">
+        <!-- Section title -->
+        <h3 class="section-title">Add Products</h3>
+        <!-- Section title -->
+
+        <!-- Section Content -->
+        <div class="section-content mt-3">
+          <form id="add-product">
+            <div class="container-fluid mx-auto">
+              <!-- Add Product Information -->
+              <div class="row bg-body rounded shadow-sm p-3 mb-3">
+                <!-- Row Header -->
+                <div class="col-12 mb-2">
+                  <h6 class="row-header">Add Product Information</h6>
+                </div>
+                <!-- Row Header -->
+
+                <!-- Note -->
+                <div class="col-12 mb-3">
+                  <span class="note"
+                    >This field labels marked with
+                    <span class="marked">*</span> are required input
+                    fields</span
+                  >
+                </div>
+                <!-- Note -->
+
+                <!-- Product Type -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="product_type">
+                    <span class="label"
+                      >Product Type <span class="marked">*</span></span
+                    >
+                    <select name="product_type" id="product_type" required>
+                      <option value="0" selected disabled>
+                        Select Product Type
+                      </option>
+                      <option value="1">Type 1</option>
+                      <option value="2">Type 2</option>
+                      <option value="3">Type 3</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Product Type -->
+
+                <!-- Product Name -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="product_name">
+                    <span class="label"
+                      >Product Name <span class="marked">*</span></span
+                    >
+                    <input
+                      type="text"
+                      name="product_name"
+                      id="product_name"
+                      required
+                    />
+                  </label>
+                </div>
+                <!-- Product Name -->
+
+                <!-- Product Code -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="product_code">
+                    <span class="label"
+                      >Product Code <span class="marked">*</span></span
+                    >
+                    <button
+                      type="button"
+                      class="floater secondary-solid rounded-corner-sm px-2 btn-shadow"
+                    >
+                      <i class="fas fa-arrow-rotate-right"></i>
+                    </button>
+                    <input type="text" name="product_code" id="product_code" />
+                  </label>
+                </div>
+                <!-- Product Code -->
+
+                <!-- Barcode Symbology -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="barcode_symbology">
+                    <span class="label"
+                      >Barcode Symbology <span class="marked">*</span></span
+                    >
+                    <select
+                      name="barcode_symbology"
+                      id="barcode_symbology"
+                      required
+                    >
+                      <option value="0" disabled selected>
+                        Select Symbology
+                      </option>
+                      <option value="1">Type 1</option>
+                      <option value="2">Type 2</option>
+                      <option value="3">Type 3</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Barcode Symbology -->
+
+                <!-- Brand -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="brand">
+                    <span class="label">Brand </span>
+                    <select name="brand" id="brand">
+                      <option value="0" selected disabled>Select Brand</option>
+                      <option value="1">Brand 1</option>
+                      <option value="2">Brand 2</option>
+                      <option value="3">Brand 3</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Brand -->
+
+                <!-- Category -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="cateogry">
+                    <span class="label"
+                      >Category <span class="marked">*</span></span
+                    >
+                    <select name="category" id="category" required>
+                      <option value="0" selected disabled>
+                        Select cateogry
+                      </option>
+                      <option value="1">Category 1</option>
+                      <option value="2">Category 2</option>
+                      <option value="3">Category 3</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Category -->
+
+                <!-- Product Unit -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="product_unit">
+                    <span class="label"
+                      >Product Unit <span class="marked">*</span></span
+                    >
+                    <select name="product_unti" id="product_unit" required>
+                      <option value="0" selected disabled>Select Unit</option>
+                      <option value="1">Unit 1</option>
+                      <option value="2">Unit 2</option>
+                      <option value="3">Unit 3</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Product Unit -->
+
+                <!-- Sale Unit -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="sale_unit">
+                    <span class="label">Sale Unit</span>
+                    <select name="sale_unit" id="sale_unit">
+                      <option value="0" selected disabled>Select Unit</option>
+                      <option value="1">Unit 1</option>
+                      <option value="2">Unit 2</option>
+                      <option value="3">Unit 3</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Sale Unit -->
+
+                <!-- Purchase Unit -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="purchase_unit">
+                    <span class="label">Purchase Unit</span>
+                    <select name="purchase_unit" id="purchase_unit">
+                      <option value="0" selected disabled>Select Unit</option>
+                      <option value="1">Unit 1</option>
+                      <option value="2">Unit 2</option>
+                      <option value="3">Unit 3</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Purchase Unit -->
+
+                <!-- Product Cost -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="product_cost">
+                    <span class="label"
+                      >Product Cost <span class="marked">*</span></span
+                    >
+                    <input
+                      type="text"
+                      name="product_cost"
+                      id="product_cost"
+                      required
+                    />
+                  </label>
+                </div>
+                <!-- Product Cost -->
+
+                <!-- Product price -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="product_price">
+                    <span class="label"
+                      >Product Price <span class="marked">*</span></span
+                    >
+                    <input
+                      type="text"
+                      name="product_price"
+                      id="product_price"
+                      required
+                    />
+                  </label>
+                </div>
+                <!-- Product price -->
+
+                <!-- Alert Quantity -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="alert_qty">
+                    <span class="label">Alert Quantity</span>
+                    <input type="text" name="alert_qty" id="alert_qty" />
+                  </label>
+                </div>
+                <!-- Alert Quantity -->
+
+                <!-- Product Tax -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="product_tax">
+                    <span class="label">Product Tax </span>
+                    <select name="product_tax" id="product_tax">
+                      <option value="0" selected disabled>No Tax</option>
+                      <option value="10">10%</option>
+                      <option value="20">20%</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Product Tax -->
+
+                <!-- Tax Method -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="tax_method">
+                    <span class="label">Tax Method </span>
+                    <select name="tax_method" id="tax_method">
+                      <option value="0" selected disabled>Select Method</option>
+                      <option value="10">Method 1</option>
+                      <option value="20">Method 2</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Tax Method -->
+
+                <!-- Is Featured -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="is_featured">
+                    <input type="checkbox" name="featured" id="is_featured" />
+                    <span class="label">Featured</span>
+                    <span class="note">
+                      <i>Featured product will be displayed in POS</i>
+                    </span>
+                  </label>
+                </div>
+                <!-- Is Featured -->
+              </div>
+              <!-- Add Product Information -->
+
+              <!-- Add Product Images -->
+              <div class="row rounded bg-body shadow-sm p-3 mb-3">
+                <!-- Row Header -->
+                <div class="col-12 mb-2">
+                  <h6 class="row-header">Add Product Images</h6>
+                </div>
+                <!-- Row Header -->
+
+                <!-- Thumbnail -->
+                <div class="col-12 col-sm-6 p-2">
+                  <label for="thumbnail_image">
+                    <span class="lable">Thumbnail Image</span>
+                    <input type="file" name="thumbnail" id="thumbnail_image" />
+                  </label>
+                </div>
+                <!-- Thumbnail -->
+
+                <!-- Video Link -->
+                <div class="col-12 col-sm-6 p-2">
+                  <label for="video_link">
+                    <span class="lable">Video Link</span>
+                    <input type="text" name="video_link" id="video_link" />
+                  </label>
+                </div>
+                <!-- Video Link -->
+
+                <!-- Product Images multiple -->
+                <div class="col-12 p-2">
+                  <label for="product_images">
+                    <span class="label">Product Images</span>
+                    <input
+                      type="file"
+                      name="product_image"
+                      id="product_image"
+                      multiple
+                    />
+                  </label>
+                </div>
+                <!-- Product Images multiple -->
+              </div>
+              <!-- Add Product Images -->
+
+              <!-- Add Product Description -->
+              <div class="row rounded bg-body shadow-sm p-3 mb-3">
+                <!-- Row Header -->
+                <div class="col-12 mb-2">
+                  <h6 class="row-header">Add Product Images</h6>
+                </div>
+                <!-- Row Header -->
+
+                <!-- Product Details -->
+                <div class="col-12 p-2">
+                  <label for="product_details">
+                    <span class="label mb-2 d-block">Product Details</span>
+                    <div id="product_details"></div>
+                  </label>
+                </div>
+                <!-- Product Details -->
+
+                <!-- Summary -->
+                <div class="col-12 p-2">
+                  <label for="summary">
+                    <span class="label mb-2 d-block">Summary</span>
+                    <div id="summary"></div>
+                  </label>
+                </div>
+                <!-- Summary -->
+              </div>
+              <!-- Add Product Description -->
+
+              <!-- Add Product Inventory -->
+              <div class="row rounded bg-body shadow-sm p-3 mb-3">
+                <!-- Row header -->
+                <div class="col-12 mb-2">
+                  <h6 class="row-header">Add Product Inventory</h6>
+                </div>
+                <!-- Row header -->
+
+                <!-- Description -->
+                <div class="col-12 p-2">
+                  <label for="dif_warehouse">
+                    <input
+                      type="checkbox"
+                      name="different_warehouse"
+                      id="dif_warehouse"
+                    />
+                    <span class="label"
+                      >This product has different warehouse</span
+                    >
+                  </label>
+                </div>
+                <!-- Description -->
+
+                <!-- Description 2 -->
+                <div class="col-12 p-2">
+                  <label for="show_in_frontedn">
+                    <input
+                      type="checkbox"
+                      name="show_in_frontedn"
+                      id="show_in_frontedn"
+                    />
+                    <span class="label">Show In Frontend</span>
+                  </label>
+                </div>
+                <!-- Description 2 -->
+
+                <!-- Description 3 -->
+                <div class="col-12 p-2">
+                  <label for="has_variants">
+                    <input
+                      type="checkbox"
+                      name="has_variants"
+                      id="has_variants"
+                    />
+                    <span class="label">This product has variant</span>
+                  </label>
+                </div>
+                <!-- Description 3 -->
+
+                <!-- Description 4 -->
+                <div class="col-12 p-2">
+                  <label for="add_promo_price">
+                    <input
+                      type="checkbox"
+                      name="add_promo_price"
+                      id="add_promo_price"
+                    />
+                    <span class="label">Add Promotional Price</span>
+                  </label>
+                </div>
+                <!-- Description 4 -->
+              </div>
+              <!-- Add Product Inventory -->
+
+              <!-- Seo Content -->
+              <div class="row rounded bg-body shadow-sm p-3 mb-3">
+                <!-- Row Header -->
+                <div class="col-12 mb-2">
+                  <h6 class="row-header">SEO Contents</h6>
+                </div>
+                <!-- Row Header -->
+
+                <!-- Meta Title * -->
+                <div class="col-12 col-sm-6 p-2">
+                  <label for="meta_title">
+                    <span class="label"
+                      >Meta Title <span class="marked">*</span></span
+                    >
+                    <input
+                      type="text"
+                      name="meta_title"
+                      id="meta_title"
+                      required
+                    />
+                  </label>
+                </div>
+                <!-- Meta Title * -->
+
+                <!-- Meta Keywords * -->
+                <div class="col-12 col-sm-6 p-2">
+                  <label for="meta_keywords">
+                    <span class="label"
+                      >Meta Keywords <span class="marked">*</span></span
+                    >
+                    <input
+                      type="text"
+                      name="meta_keywords"
+                      id="meta_keywords"
+                      required
+                    />
+                    <span class="note text-secondary"
+                      ><i class="fas fa-info-circle me-1"></i>Type, as separator
+                      or hit enter among keywords</span
+                    >
+                  </label>
+                </div>
+                <!-- Meta Keywords * -->
+
+                <!-- Meta Description * -->
+                <div class="col-12 p-2">
+                  <label for="meta_description">
+                    <span class="label mb-2 d-block"
+                      >Meta Description <span class="marked">*</span></span
+                    >
+                    <div id="meta_description"></div>
+                  </label>
+                </div>
+                <!-- Meta Description * -->
+              </div>
+              <!-- Seo Content -->
+
+              <!-- Submit Button -->
+              <div class="row">
+                <div class="col-4">
+                  <button
+                    class="fluid-width secondary-solid rounded-corner-sm px-3 py-2 btn-shadow"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+              <!-- Submit Button -->
+            </div>
+          </form>
+        </div>
+        <!-- Section Content -->
+      </section>
+    </main>
+    <!-- Main -->
+
+    <!-- Imports -->
     <script src="./js/common.js"></script>
-    <!-- script -->
+    <script src="./js/editor/ckeditor.js"></script>
+    <!-- Imports -->
+
+    <!-- Editor Script -->
+    <script>
+      ClassicEditor.create(document.querySelector("#product_details"), {
+        toolbar: [
+          "heading",
+          "|",
+          "bold",
+          "italic",
+          "link",
+          "bulletedList",
+          "numberedList",
+          "blockQuote",
+        ],
+        heading: {
+          options: [
+            {
+              model: "paragraph",
+              title: "Paragraph",
+              class: "ck-heading_paragraph",
+            },
+            {
+              model: "heading1",
+              view: "h1",
+              title: "Heading 1",
+              class: "ck-heading_heading1",
+            },
+            {
+              model: "heading2",
+              view: "h2",
+              title: "Heading 2",
+              class: "ck-heading_heading2",
+            },
+          ],
+        },
+      }).catch((error) => {
+        console.log(error);
+      });
+      ClassicEditor.create(document.querySelector("#summary"), {
+        toolbar: [
+          "heading",
+          "|",
+          "bold",
+          "italic",
+          "link",
+          "bulletedList",
+          "numberedList",
+          "blockQuote",
+        ],
+        heading: {
+          options: [
+            {
+              model: "paragraph",
+              title: "Paragraph",
+              class: "ck-heading_paragraph",
+            },
+            {
+              model: "heading1",
+              view: "h1",
+              title: "Heading 1",
+              class: "ck-heading_heading1",
+            },
+            {
+              model: "heading2",
+              view: "h2",
+              title: "Heading 2",
+              class: "ck-heading_heading2",
+            },
+          ],
+        },
+      }).catch((error) => {
+        console.log(error);
+      });
+      ClassicEditor.create(document.querySelector("#meta_description"), {
+        toolbar: [
+          "heading",
+          "|",
+          "bold",
+          "italic",
+          "link",
+          "bulletedList",
+          "numberedList",
+          "blockQuote",
+        ],
+        heading: {
+          options: [
+            {
+              model: "paragraph",
+              title: "Paragraph",
+              class: "ck-heading_paragraph",
+            },
+            {
+              model: "heading1",
+              view: "h1",
+              title: "Heading 1",
+              class: "ck-heading_heading1",
+            },
+            {
+              model: "heading2",
+              view: "h2",
+              title: "Heading 2",
+              class: "ck-heading_heading2",
+            },
+          ],
+        },
+      }).catch((error) => {
+        console.log(error);
+      });
+    </script>
+    <!-- Editor Script -->
   </body>
 </html>

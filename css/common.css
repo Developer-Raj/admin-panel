@@ -12,6 +12,7 @@
 }
 
 :root {
+  /* Custom */
   --primary: #984dc3;
   --primary-hover: #773c98;
   --secondary: #505edc;
@@ -26,6 +27,7 @@
   --xl-radius: 50px;
   --btn-shadow: inset 0px -2px 1px 0px rgb(0 0 0 / 20%);
   --shadow: 0px 3px 3px 0px rgb(0 0 0 / 06%);
+  /* Custom */
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -49,7 +51,6 @@ a {
   text-decoration: none !important;
   color: var(--dark) !important;
 }
-
 main {
   position: relative;
   left: 250px;
@@ -60,6 +61,21 @@ main {
   background: var(--white);
   padding: 10px 0px 10px 10px !important;
 }
+
+/* Bootstrap */
+.dropdown-item {
+  padding: 05px 10px !important;
+  font-weight: 500;
+  font-size: 14px;
+}
+.dropdown-item a {
+  color: var(--dark) !important;
+}
+.dropdown-item:active {
+  background: var(--primary-hover) !important;
+  color: var(--white) !important;
+}
+/* Bootstrap */
 
 .table {
   margin-bottom: 1rem !important;
@@ -92,6 +108,12 @@ table td {
   font-weight: 500;
   padding: 5px !important;
   border: none !important;
+}
+table td select {
+  border: 1px solid var(--primary);
+  border-radius: var(--sm-radius);
+  font-size: 14px;
+  font-weight: 500;
 }
 table tbody tr:nth-child(even) {
   background: var(--body-background);
@@ -311,6 +333,9 @@ form label .floater {
   top: 35px;
   z-index: 22;
 }
+form label .floater i {
+  font-size: 12px;
+}
 form label,
 form textarea,
 form input:not([type="checkbox"]),
@@ -391,6 +416,9 @@ form select {
   border-radius: var(--sm-radius);
 }
 /* Apex Chart */
+.apexcharts-canvas {
+  margin: 0 auto !important;
+}
 .apexcharts-legend-series {
   margin: 2px 5px !important;
 }
@@ -399,3 +427,88 @@ form select {
 }
 /* Apex Chart */
 /* Dashboard-Graph */
+
+/* Section Title */
+.section-title {
+  font-weight: 600;
+  font-family: "Work Sans", sans-serif;
+}
+/* Section Title */
+
+/* CK Correction */
+.ck.ck-button.ck-button_with-text,
+a.ck.ck-button.ck-button_with-text {
+  padding: var(--ck-spacing-tiny) var(--ck-spacing-standard) !important;
+}
+
+.ck-rounded-corners .ck.ck-button,
+.ck-rounded-corners a.ck.ck-button,
+.ck.ck-button.ck-rounded-corners,
+a.ck.ck-button.ck-rounded-corners {
+  border-radius: var(--ck-border-radius) !important;
+}
+.ck.ck-button,
+a.ck.ck-button {
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  cursor: default;
+  font-size: inherit;
+  line-height: 1;
+  min-height: var(--ck-ui-component-min-height);
+  min-width: var(--ck-ui-component-min-height);
+  padding: var(--ck-spacing-tiny) !important;
+  text-align: center;
+  transition: box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.ck.ck-editor__editable_inline > :last-child {
+  margin-bottom: var(--ck-spacing-large) !important;
+}
+.ck.ck-editor__editable_inline > :first-child {
+  margin-bottom: var(--ck-spacing-large) !important;
+}
+
+.ck.ck-editor__editable_inline {
+  border: 1px solid transparent;
+  overflow: auto;
+  padding: 0 var(--ck-spacing-standard) !important;
+}
+
+.ck-rounded-corners .ck.ck-editor__editable:not(.ck-editor__nested-editable),
+.ck.ck-editor__editable.ck-rounded-corners:not(.ck-editor__nested-editable) {
+  border-radius: var(--ck-border-radius) !important;
+}
+
+.ck-rounded-corners .ck.ck-editor__main > .ck-editor__editable,
+.ck.ck-editor__main > .ck-editor__editable.ck-rounded-corners {
+  border-radius: var(--ck-border-radius) !important;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar,
+.ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners {
+  border-radius: var(--ck-border-radius) !important;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ck.ck-toolbar {
+  background: var(--ck-color-toolbar-background) !important;
+  border: 1px solid var(--ck-color-toolbar-border);
+  padding: 0 var(--ck-spacing-small) !important;
+}
+
+.ck.ck-content {
+  font-size: 1em;
+  line-height: 1.6em !important;
+  margin-bottom: 0.8em !important;
+  min-height: 200px;
+  padding: 1.5em 2em !important;
+}
+.ck-editor {
+  border-radius: 10px !important;
+}
+/* CK Correction */

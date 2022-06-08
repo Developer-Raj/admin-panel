@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Import Sale</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <!-- Styles -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap -->
+
+    <!-- Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Library -->
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="d-flex justify-content-center align-items-center outline">
+      <div class="container-fluid mx-auto px-3">
+        <div class="row">
+          <!-- Logo -->
+          <div class="col-6">
+            <div class="logo-container">
+              <a href="../index.html">
+                <img
+                  src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo3.png"
+                  alt=""
+                  class="logo"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- Logo -->
+          <!-- Desktop View -->
+          <div
+            class="col-6 text-end d-flex justify-content-end align-items-center d-md-flex d-none"
+          >
+            <div class="dropdown d-container">
+              <button
+                id="dLabel"
+                type="button"
+                class="dropdown-toggle d-toggle primary-default rounded-corner-sm"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-server me-2"></i>
+              </button>
+              <ul class="dropdown-menu d-menu" aria-labelledby="dLabel">
+                <li class="dropdown-item d-item">
+                  <a href="#">Branch 1</a>
+                </li>
+                <li class="dropdown-item d-item">
+                  <a href="#">Branch 2</a>
+                </li>
+                <li class="dropdown-item d-item">
+                  <a href="#">Branch 3</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown d-container">
+              <button
+                id="dLabel"
+                type="button"
+                class="dropdown-toggle d-toggle primary-default rounded-corner-sm"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-user me-2"></i>
+              </button>
+              <ul class="dropdown-menu d-menu" aria-labelledby="dLabel">
+                <li class="dropdown-item d-item">
+                  <a href="#">Edit Profile</a>
+                </li>
+                <li class="dropdown-item d-item">
+                  <a href="#">Settings</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown d-container">
+              <button
+                id="dLabel"
+                type="button"
+                class="dropdown-toggle d-toggle primary-default rounded-corner-sm"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-earth-asia me-2"></i>
+              </button>
+              <ul class="dropdown-menu d-menu" aria-labelledby="dLabel">
+                <li class="dropdown-item d-item">
+                  <a href="#">English</a>
+                </li>
+                <li class="dropdown-item d-item">
+                  <a href="#">Arabic</a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="action-container d-flex justify-content-between align-items-center"
+            >
+              <a
+                href="#pos"
+                class="primary-solid btn-shadow rounded-corner-sm text-light px-2 py-1 me-2"
+                >POS</a
+              >
+              <a
+                href="#restaurant"
+                class="primary-solid btn-shadow rounded-corner-sm text-light px-2 py-1 me-2"
+                >Restaurant</a
+              >
+              <a
+                href="#ecommerce"
+                class="primary-solid btn-shadow rounded-corner-sm text-light px-2 py-1 me-2"
+                >Ecommerce</a
+              >
+              <button
+                class="btn-rounded btn-shadow primary-outline"
+                id="fullscreen-button"
+                data-toggle="false"
+              >
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Desktop View -->
+
+          <!-- Mobile View -->
+          <div
+            class="col-6 d-flex justify-content-end align-items-center d-md-none d-flex"
+          >
+            <button class="menu" id="menu-btn" data-toggle="false">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div
+              class="menu-container p-3"
+              id="menu-container"
+              data-toggle="false"
+            >
+              <div class="container-fluid mx-auto">
+                <!-- Quick Access -->
+                <div class="row">
+                  <!-- Branch Dropdown Container -->
+                  <div class="col-9">
+                    <div class="dropdown d-container text-start">
+                      <button
+                        id="dLabel"
+                        type="button"
+                        class="dropdown-toggle d-toggle primary-default rounded-corner-sm"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="fas fa-server me-2"></i>Branch
+                      </button>
+                      <ul class="dropdown-menu d-menu" aria-labelledby="dLabel">
+                        <li class="dropdown-item d-item">
+                          <a href="#">Branch 1</a>
+                        </li>
+                        <li class="dropdown-item d-item">
+                          <a href="#">Branch 2</a>
+                        </li>
+                        <li class="dropdown-item d-item">
+                          <a href="#">Branch 3</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Branch Dropdown Container -->
+                  <!-- Close Menu -->
+                  <div class="col-3">
+                    <div class="action-container text-end">
+                      <button
+                        class="btn-rounded btn-shadow primary-outline"
+                        id="CloseMenu-btn"
+                      >
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Close Menu -->
+                </div>
+                <!-- Quick Access -->
+
+                <!-- quick action -->
+                <div class="row mt-3">
+                  <div class="col-6 py-2 pe-1">
+                    <a
+                      href="#pos"
+                      class="primary-solid d-block fluid-width btn-shadow rounded-corner-sm text-light px-2 py-1 me-2"
+                      >POS</a
+                    >
+                  </div>
+                  <div class="col-6 py-2 ps-1">
+                    <a
+                      href="#restaurant"
+                      class="primary-solid d-block fluid-width btn-shadow rounded-corner-sm text-light px-2 py-1 me-2"
+                      >Restaurant</a
+                    >
+                  </div>
+                  <div class="col-12 py-2">
+                    <a
+                      href="#ecommerce"
+                      class="primary-solid d-block fluid-width btn-shadow rounded-corner-sm text-light px-2 py-1 me-2"
+                      >Ecommerce</a
+                    >
+                  </div>
+                </div>
+                <!-- quick action -->
+
+                <!-- Fullscreen Button -->
+                <div class="row mt-3">
+                  <div class="col-12">
+                    <button
+                      class="px-3 py-2 primary-outline rounded-corner-sm fluid-width"
+                      id="MMFS-btn"
+                      data-toggle="false"
+                    >
+                      Enter Fullscreen
+                    </button>
+                  </div>
+                </div>
+                <!-- Fullscreen Button -->
+
+                <!-- Mobile Sidebar Navigation -->
+                <div class="row mt-3">
+                  <!-- Default Links -->
+                  <ul class="nav-links mt-2">
+                    <li>
+                      <a href="./index.html"
+                        ><i class="fas fa-chart-line me-2"></i>Dashboard</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Default Links -->
+
+                  <!-- Collapsing Links -->
+                  <div
+                    class="accordion accordion-flush accordion-container"
+                    id="accordian-navigation"
+                  >
+                    <!-- POS -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="acn-pos">
+                        <button
+                          class="accordion-btn text-start primary-default rounded-corner-sm collapsed fluid-width d-flex justify-content-between align-items-center"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-pos"
+                          aria-expanded="false"
+                          aria-controls="flush-pos"
+                        >
+                          <span>
+                            <i class="fas fa-cash-register me-2"></i>
+                            POS
+                          </span>
+                          <i
+                            class="fas fa-chevron-up"
+                            style="font-size: 12px"
+                          ></i>
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-pos"
+                        class="accordion-collapse collapse ps-3"
+                        aria-labelledby="acn-pos"
+                        data-bs-parent="#accordian-navigation-l2"
+                      >
+                        <div class="accordion-body mt-3">
+                          <div
+                            class="accordion accordion-flush accordion-container"
+                            id="accordian-navigation-l2"
+                          >
+                            <!-- Category -->
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="acn-category">
+                                <button
+                                  class="accordion-btn text-start primary-default rounded-corner-sm collapsed fluid-width d-flex justify-content-between align-items-center"
+                                  type="button"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#mvan-category"
+                                  aria-expanded="false"
+                                  aria-controls="mvan-category"
+                                >
+                                  <span>
+                                    <i class="fas fa-folder-tree me-2"></i>
+                                    Category
+                                  </span>
+                                  <i
+                                    class="fas fa-chevron-up"
+                                    style="font-size: 12px"
+                                  ></i>
+                                </button>
+                              </h2>
+                              <div
+                                id="mvan-category"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="acn-category"
+                                data-bs-parent="#accordian-navigation"
+                              >
+                                <div class="accordion-body mt-3">
+                                  <ul class="nav-links">
+                                    <li>
+                                      <a href="./category.html">Add Category</a>
+                                    </li>
+                                    <li>
+                                      <a href="./category.html"
+                                        >Import Category</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a href="./category.html"
+                                        >Category Listing</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Category -->
+
+                            <!-- Coupon -->
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="acn-category">
+                                <button
+                                  class="accordion-btn text-start primary-default rounded-corner-sm collapsed fluid-width d-flex justify-content-between align-items-center"
+                                  type="button"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#mvan-coupon"
+                                  aria-expanded="false"
+                                  aria-controls="mvan-coupon"
+                                >
+                                  <span>
+                                    <i class="fas fa-barcode me-2"></i>
+                                    Coupon
+                                  </span>
+                                  <i
+                                    class="fas fa-chevron-up"
+                                    style="font-size: 12px"
+                                  ></i>
+                                </button>
+                              </h2>
+                              <div
+                                id="mvan-coupon"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="acn-category"
+                                data-bs-parent="#accordian-navigation"
+                              >
+                                <div class="accordion-body mt-3">
+                                  <ul class="nav-links">
+                                    <li>
+                                      <a href="./coupon.html">Add Coupon</a>
+                                    </li>
+                                    <li>
+                                      <a href="./coupon.html">Coupon List</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Coupon -->
+
+                            <!-- Gift Card -->
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="acn-gift-card">
+                                <button
+                                  class="accordion-btn text-start primary-default rounded-corner-sm collapsed fluid-width d-flex justify-content-between align-items-center"
+                                  type="button"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#mvan-gift-card"
+                                  aria-expanded="false"
+                                  aria-controls="mvan-gift-card"
+                                >
+                                  <span>
+                                    <i class="fas fa-gift me-2"></i>
+                                    Gift Card
+                                  </span>
+                                  <i
+                                    class="fas fa-chevron-up"
+                                    style="font-size: 12px"
+                                  ></i>
+                                </button>
+                              </h2>
+                              <div
+                                id="mvan-gift-card"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="acn-gift-card"
+                                data-bs-parent="#accordian-navigation"
+                              >
+                                <div class="accordion-body mt-3">
+                                  <ul class="nav-links">
+                                    <li>
+                                      <a href="./gift-card.html"
+                                        >Gift Card list</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a href="./gift-card.html"
+                                        >Add Gift Card</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Gift Card -->
+
+                            <!-- Delivery -->
+                            <div class="accordion-item">
+                              <h2
+                                class="accordion-header"
+                                id="acn-delivery-list"
+                              >
+                                <button
+                                  class="accordion-btn text-start primary-default rounded-corner-sm collapsed fluid-width d-flex justify-content-between align-items-center"
+                                  type="button"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#mvan-delivery-list"
+                                  aria-expanded="false"
+                                  aria-controls="mvan-delivery-list"
+                                >
+                                  <span>
+                                    <i class="fas fa-truck me-2"></i>
+                                    Delivery
+                                  </span>
+                                  <i
+                                    class="fas fa-chevron-up"
+                                    style="font-size: 12px"
+                                  ></i>
+                                </button>
+                              </h2>
+                              <div
+                                id="mvan-delivery-list"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="acn-delivery-list"
+                                data-bs-parent="#accordian-navigation"
+                              >
+                                <div class="accordion-body mt-3">
+                                  <ul class="nav-links">
+                                    <li>
+                                      <a href="./delivery-list.html"
+                                        >Delivery List</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Delivery -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- POS -->
+                  </div>
+                  <!-- Collapsing Links -->
+
+                  <!-- Default Links -->
+                  <ul class="nav-links fluid-width mt-0">
+                    <li>
+                      <a href="./add-quotation.html">
+                        <i class="fas fa-quote-left me-2"></i>Add Quotation</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./add-product.html">
+                        <i class="fas fa-box me-2"></i>Add Products</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./products-list.html">
+                        <i class="fas fa-box me-2"></i>Products</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./print-barcode.html">
+                        <i class="fas fa-box me-2"></i>Print Products Barcode</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./add-purchase.html">
+                        <i class="fas fa-money-bill me-2"></i>Add Purchase</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./import-purchase.html">
+                        <i class="fas fa-money-bill me-2"></i>Import Purchase</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./purchase-list.html">
+                        <i class="fas fa-money-bill me-2"></i>Purchase</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./add-sale.html">
+                        <i class="fas fa-money-bill me-2"></i>Add Sales</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./import-sale.html">
+                        <i class="fas fa-money-bill me-2"></i>Import Sales</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./sale.html">
+                        <i class="fas fa-money-bill me-2"></i>Sales</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"> <i class="fas fa-cog me-2"></i>Settings</a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fas fa-right-from-bracket me-2"></i>Logout</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Default Links -->
+                </div>
+                <!-- Mobile Sidebar Navigation -->
+              </div>
+            </div>
+            <div class="overlay" id="menuOverlay"></div>
+          </div>
+          <!-- Mobile View -->
+        </div>
+      </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Sidebar -->
+    <div class="sidebar p-2 outline d-md-block d-none active" id="sidebar">
+      <div
+        class="container-fluid mx-auto p-0 d-flex justify-content-center align-items-center"
+      >
+        <!-- <div class="controller">
+              <button
+                class="primary-outline btn-30 rounded-corner-lg"
+                id="control-btn"
+              >
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div> -->
+        <div class="row fluid-width">
+          <!-- Default Links -->
+          <ul class="nav-links fluid-width mb-0">
+            <li>
+              <a href="./index.html">
+                <i class="fas fa-chart-line me-2"></i>Dashboard</a
+              >
+            </li>
+          </ul>
+          <!-- Default Links -->
+
+          <!-- Collapsing Links -->
+          <div
+            class="accordion accordion-flush accordion-container"
+            id="accordian-sidebar-navigation"
+          >
+            <!-- POS -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="acn-pos">
+                <button
+                  class="accordion-btn text-start primary-default rounded-corner-sm collapsed fluid-width d-flex justify-content-between align-items-center"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#sidebar-pos"
+                  aria-expanded="false"
+                  aria-controls="sidebar-pos"
+                >
+                  <span>
+                    <i class="fas fa-cash-register me-2"></i>
+                    POS
+                  </span>
+                  <i class="fas fa-chevron-up" style="font-size: 12px"></i>
+                </button>
+              </h2>
+              <div
+                id="sidebar-pos"
+                class="accordion-collapse collapse ps-3"
+                aria-labelledby="acn-pos"
+                data-bs-parent="#accordian-sidebar-navigation"
+              >
+                <div class="accordion-body mt-3">
+                  <div
+                    class="accordion accordion-flush accordion-container"
+                    id="accordian-sidebar-navigation-l2"
+                  >
+                    <!-- Category -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="acn-category">
+                        <button
+                          class="accordion-btn text-start primary-default rounded-corner-sm collapsed fluid-width d-flex justify-content-between align-items-center"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-category"
+                          aria-expanded="false"
+                          aria-controls="flush-category"
+                        >
+                          <span>
+                            <i class="fas fa-folder-tree me-2"></i>
+                            Category
+                          </span>
+                          <i
+                            class="fas fa-chevron-up"
+                            style="font-size: 12px"
+                          ></i>
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-category"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="acn-category"
+                        data-bs-parent="#accordian-sidebar-navigation-l2"
+                      >
+                        <div class="accordion-body mt-3">
+                          <ul class="nav-links">
+                            <li>
+                              <a href="./category.html">Add Category</a>
+                            </li>
+                            <li>
+                              <a href="./category.html">Import Category</a>
+                            </li>
+                            <li>
+                              <a href="./category.html">Category Listing</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Category -->
+
+                    <!-- Coupon -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="acn-coupon">
+                        <button
+                          class="accordion-btn text-start primary-default rounded-corner-sm collapsed fluid-width d-flex justify-content-between align-items-center"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#sidebar-coupon"
+                          aria-expanded="false"
+                          aria-controls="sidebar-coupon"
+                        >
+                          <span>
+                            <i class="fas fa-barcode me-2"></i>
+                            Coupon
+                          </span>
+                          <i
+                            class="fas fa-chevron-up"
+                            style="font-size: 12px"
+                          ></i>
+                        </button>
+                      </h2>
+                      <div
+                        id="sidebar-coupon"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="acn-coupon"
+                        data-bs-parent="#accordian-sidebar-navigation-l2"
+                      >
+                        <div class="accordion-body mt-3">
+                          <ul class="nav-links">
+                            <li>
+                              <a href="./coupon.html">Add Coupon</a>
+                            </li>
+                            <li>
+                              <a href="./coupon.html">Coupon List</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Coupon -->
+
+                    <!-- Gift Card -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="acn-gift-card">
+                        <button
+                          class="accordion-btn text-start primary-default rounded-corner-sm collapsed fluid-width d-flex justify-content-between align-items-center"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#sidebar-gift-card"
+                          aria-expanded="false"
+                          aria-controls="sidebar-gift-card"
+                        >
+                          <span>
+                            <i class="fas fa-gift me-2"></i>
+                            Gift Card
+                          </span>
+                          <i
+                            class="fas fa-chevron-up"
+                            style="font-size: 12px"
+                          ></i>
+                        </button>
+                      </h2>
+                      <div
+                        id="sidebar-gift-card"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="acn-gift-card"
+                        data-bs-parent="#accordian-sidebar-navigation-l2"
+                      >
+                        <div class="accordion-body mt-3">
+                          <ul class="nav-links">
+                            <li>
+                              <a href="./gift-card.html">Add Gift Card</a>
+                            </li>
+                            <li>
+                              <a href="./gift-card.html">Gift Card Listing</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Gift Card -->
+
+                    <!-- Delivery -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="acn-delivery-list">
+                        <button
+                          class="accordion-btn text-start primary-default rounded-corner-sm collapsed fluid-width d-flex justify-content-between align-items-center"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#sidebar-delivery-list"
+                          aria-expanded="false"
+                          aria-controls="sidebar-delivery-list"
+                        >
+                          <span>
+                            <i class="fas fa-truck me-2"></i>
+                            Delivery
+                          </span>
+                          <i
+                            class="fas fa-chevron-up"
+                            style="font-size: 12px"
+                          ></i>
+                        </button>
+                      </h2>
+                      <div
+                        id="sidebar-delivery-list"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="acn-delivery-list"
+                        data-bs-parent="#accordian-sidebar-navigation-l2"
+                      >
+                        <div class="accordion-body mt-3">
+                          <ul class="nav-links">
+                            <li>
+                              <a href="./delivery-list.html">Delivery List</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Delivery -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- POS -->
+          </div>
+          <!-- Collapsing Links -->
+
+          <!-- Default Links -->
+          <ul class="nav-links fluid-width mt-0">
+            <li>
+              <a href="./add-quotation.html">
+                <i class="fas fa-quote-left me-2"></i>Add Quotation</a
+              >
+            </li>
+            <li>
+              <a href="./add-product.html">
+                <i class="fas fa-box me-2"></i>Add Products</a
+              >
+            </li>
+            <li>
+              <a href="./products-list.html">
+                <i class="fas fa-box me-2"></i>Products</a
+              >
+            </li>
+            <li>
+              <a href="./print-barcode.html">
+                <i class="fas fa-box me-2"></i>Print Products Barcode</a
+              >
+            </li>
+            <li>
+              <a href="./add-purchase.html">
+                <i class="fas fa-money-bill me-2"></i>Add Purchase</a
+              >
+            </li>
+            <li>
+              <a href="./import-purchase.html">
+                <i class="fas fa-money-bill me-2"></i>Import Purchase</a
+              >
+            </li>
+            <li>
+              <a href="./purchase-list.html">
+                <i class="fas fa-money-bill me-2"></i>Purchase</a
+              >
+            </li>
+            <li>
+              <a href="./add-sale.html">
+                <i class="fas fa-money-bill me-2"></i>Add Sales</a
+              >
+            </li>
+            <li>
+              <a href="./import-sale.html">
+                <i class="fas fa-money-bill me-2"></i>Import Sales</a
+              >
+            </li>
+            <li>
+              <a href="./sale.html">
+                <i class="fas fa-money-bill me-2"></i>Sales</a
+              >
+            </li>
+            <li>
+              <a href="#"> <i class="fas fa-cog me-2"></i>Settings</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-right-from-bracket me-2"></i>Logout</a
+              >
+            </li>
+          </ul>
+          <!-- Default Links -->
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar -->
+
+    <!-- Main -->
+    <main class="bg-light">
+      <!-- Section Import purchase -->
+      <section class="import-purchase p-2">
+        <!-- Section title -->
+        <h3 class="section-title mb-3">Import Sale</h3>
+        <!-- Section title -->
+
+        <!-- Section Content -->
+        <div class="section-content">
+          <form class="import_purchase" id="import_purchase_form">
+            <div class="container-fluid mx-auto">
+              <!-- Form Content -->
+              <div class="row rounded shadow-sm bg-white p-2">
+                <!-- Note -->
+                <div class="col-12 mb-3 p-2">
+                  <span class="note"
+                    >The field labels marked with
+                    <span class="marked">*</span> are required input
+                    fields</span
+                  >
+                </div>
+                <!-- Note -->
+
+                <!-- Customer * -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="customer">
+                    <span class="label"
+                      >Customer <span class="marked">*</span></span
+                    >
+                    <select name="customer" id="customer" required>
+                      <option value="0" selected disabled>
+                        Select customer
+                      </option>
+                      <option value="1">Customer 1</option>
+                      <option value="2">Customer 2</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Customer * -->
+
+                <!-- Warehouse * -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="warehouse">
+                    <span class="label"
+                      >Warehouse <span class="marked">*</span></span
+                    >
+                    <select name="warehouse" id="warehouse" required>
+                      <option value="0" selected disabled>
+                        Select warehouse
+                      </option>
+                      <option value="1">Warehouse 1</option>
+                      <option value="2">Warehouse 2</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Warehouse * -->
+
+                <!-- Biller -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="biller">
+                    <span class="label">Biller</span>
+                    <select name="Biller" id="biller">
+                      <option value="0" selected disabled>Select Biller</option>
+                      <option value="1">Biller 1</option>
+                      <option value="2">Biller 2</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Biller -->
+
+                <!-- Upload CSV File * -->
+                <div class="col-12 col-sm-6 p-2">
+                  <label for="upload_csv_file">
+                    <span class="label"
+                      >Upload CSV File <span class="marked">*</span></span
+                    >
+                    <input
+                      type="file"
+                      name="csv_file"
+                      id="upload_csv_file"
+                      required
+                    />
+                    <span class="note text-secondary">
+                      <i class="fas fa-info-secondary"></i>
+                      The correct column order is (product_code, quantity,
+                      purchase_cost, discount, tax_name) and you must follow
+                      this. All columns are required.
+                    </span>
+                  </label>
+                </div>
+                <!-- Upload CSV File * -->
+
+                <!-- Download Sample File -->
+                <div
+                  class="col-12 col-sm-6 p-2 d-flex align-items-start justify-content-start flex-column"
+                >
+                  <span class="label d-block">Download Sample File</span>
+                  <a
+                    href="#download"
+                    download
+                    class="secondary-solid rounded-corner-sm btn-shadow px-3 py-2 text-light fluid-width text-center"
+                  >
+                    <i class="fas fa download"></i>
+                    Download
+                  </a>
+                </div>
+                <!-- Download Sample File -->
+
+                <!-- Order Tax -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="order_tax">
+                    <span class="label">Order Tax</span>
+                    <select name="order_tax" id="order_tax">
+                      <option value="0" selected disabled>No Tax</option>
+                      <option value="1">Tax 1</option>
+                      <option value="2">Tax 2</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Order Tax -->
+
+                <!-- Discount -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="discount">
+                    <span class="label">Discount</span>
+                    <input type="text" name="discount" id="discount" />
+                  </label>
+                </div>
+                <!-- Discount -->
+
+                <!-- Shipping Cost -->
+                <div class="col-12 col-sm-4 p-2">
+                  <label for="shipping_cost">
+                    <span class="label">Shipping Cost</span>
+                    <input
+                      type="text"
+                      name="shipping_cost"
+                      id="shipping_cost"
+                    />
+                  </label>
+                </div>
+                <!-- Shipping Cost -->
+
+                <!-- Attach Documents -->
+                <div class="col-12 col-sm-6 p-2">
+                  <label for="attach_document">
+                    <span class="label" title="add info here"
+                      >Attach Document
+                      <i class="fas fa-info-circle text-secondary"></i
+                    ></span>
+                    <input type="file" name="documents" id="attach_document" />
+                  </label>
+                </div>
+                <!-- Attach Documents -->
+
+                <!-- Sale Status * -->
+                <div class="col-12 col-sm-6 p-2">
+                  <label for="sale_status">
+                    <span class="label"
+                      >Sale Status <span class="marked">*</span></span
+                    >
+                    <select name="Sale Status" id="sale_status">
+                      <option value="0" selected disabled>Select Status</option>
+                      <option value="1">Status 1</option>
+                      <option value="2">Status 2</option>
+                    </select>
+                  </label>
+                </div>
+                <!-- Sale Status * -->
+
+                <!-- Staff Note -->
+                <div class="col-12 col-sm-6 p-2">
+                  <label for="staff_note">
+                    <span class="lable">Staff Note</span>
+                    <textarea name="staff_note" id="staff_note"></textarea>
+                  </label>
+                </div>
+                <!-- Staff Note -->
+
+                <!-- Note -->
+                <div class="col-12 col-sm-6 p-2">
+                  <label for="sale_note">
+                    <span class="lable">Sale Note</span>
+                    <textarea name="sale_note" id="sale_note"></textarea>
+                  </label>
+                </div>
+                <!-- Note -->
+              </div>
+              <!-- Form Content -->
+
+              <!-- Submit Button -->
+              <div class="row mt-3">
+                <div class="col-4">
+                  <button
+                    type="submit"
+                    class="btn-shadow secondary-solid rounded-corner-sm px-3 py-2 fluid-width"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+              <!-- Submit Button -->
+            </div>
+          </form>
+        </div>
+        <!-- Section Content -->
+      </section>
+      <!-- Section Import purchase -->
+    </main>
+    <!-- Main -->
+
+    <!-- script -->
+    <script src="./js/common.js"></script>
+    <!-- script -->
+  </body>
+</html>
