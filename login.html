@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap -->
+
+    <!-- Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Library -->
+  </head>
+  <body class="bg-light">
+    <div class="login-wrapper bg-white p-3 shadow-sm rounded-corner-lg">
+      <form class="login-form" id="login-form">
+        <div class="container-fluid mx-auto">
+          <div class="row">
+            <!-- Row Header -->
+            <div class="col-12 mb-3 text-center">
+              <h4 class="row-header primary-default mb-2">Sale's Pro</h4>
+              <h6 class="row-header">Login</h6>
+            </div>
+            <!-- Row Header -->
+
+            <!-- Username -->
+            <div class="col-12 p-2">
+              <label for="username">
+                <span class="label">Username</span>
+                <input type="text" name="username" id="username" />
+              </label>
+            </div>
+            <!-- Username -->
+
+            <!-- Password -->
+            <div class="col-12 p-2">
+              <label for="password">
+                <span class="label">Password</span>
+                <input type="password" name="password" id="password" />
+              </label>
+            </div>
+            <!-- Password -->
+
+            <!-- Login Button -->
+            <div class="col-12 p-2">
+              <button
+                class="primary-solid rounded-corner-sm btn-shadow px-3 py-2 fluid-width"
+                type="submit"
+              >
+                Login
+              </button>
+              <a
+                href="#forgot-password"
+                class="text-secondary my-2 text-center d-block"
+                >Forgot Password?</a
+              >
+            </div>
+            <!-- Login Button -->
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

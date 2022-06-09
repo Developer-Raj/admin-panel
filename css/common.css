@@ -512,3 +512,77 @@ a.ck.ck-button {
   border-radius: 10px !important;
 }
 /* CK Correction */
+
+/* Bootstrap Correction */
+.nav-tabs {
+  border-bottom: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link {
+  display: block;
+  padding: 0.3rem 0.8rem !important;
+  color: var(--dark) !important;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+  font-family: "Work Sans", sans-serif !important;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: var(--sm-radius) !important;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: var(--white) !important;
+  background-color: var(--primary-hover) !important;
+  border-color: #dee2e6 #dee2e6 #fff;
+  border: none !important;
+  box-shadow: var(--btn-shadow);
+}
+
+.nav-tabs .nav-link {
+  margin-bottom: -1px !important;
+  background: 0 0;
+  border: none !important;
+}
+
+.tab-content {
+  font-family: "Work Sans", sans-serif !important;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 15px !important;
+  padding: 1rem 0.8rem !important;
+
+  background: var(--bs-light);
+  border-radius: var(--sm-radius);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: var(--white) !important;
+  background-color: var(--secondary-hover) !important;
+  min-width: 200px;
+}
+.nav {
+  padding: 10px !important;
+}
+.nav button.nav-link.text-start:not(:last-child) {
+  margin-bottom: 10px !important;
+}
+.tab-content {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+}
+#v-pills-tabContent {
+  background: var(--white);
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+}
+/* Bootstrap Correction */
+
+/* Staff EMP */
+/* Staff EMP */
