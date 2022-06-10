@@ -863,29 +863,92 @@
         <!-- Section Content -->
         <div class="section-content mt-3">
           <!-- Table Controller -->
-          <div class="table-controller mb-3 fluid-width text-end">
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button
-                type="button"
-                class="btn btn-sm primary-solid btn-warning px-2 py-1"
-              >
-                PDF
-              </button>
-              <button
-                type="button"
-                class="btn btn-sm primary-solid px-2 py-1 btn-primary"
-              >
-                CSV
-              </button>
-              <button type="button" class="btn btn-sm btn-info px-2 py-1">
-                Print
-              </button>
-              <button
-                type="button"
-                class="btn btn-sm primary-solid px-2 py-1 btn-danger"
-              >
-                Delete
-              </button>
+          <div class="table-controller mb-3 fluid-width">
+            <div
+              class="table-controller mb-3 fluid-width d-flex justify-content-between align-items-center"
+            >
+              <div class="filter-options" style="max-width: 600px; width: 100%">
+                <form id="filter_option_form" class="filter_options">
+                  <div class="container-fluid mx-auto">
+                    <div class="row">
+                      <!-- Choose Date -->
+                      <div class="col-6 px-2">
+                        <label for="choose_date">
+                          <span class="label">Choose Date</span>
+                          <div
+                            class="input-group d-flex justify-content-start align-items-center fluid-width"
+                          >
+                            <input
+                              type="date"
+                              name="Date from"
+                              id="choose_date"
+                              class="d-inline-block"
+                              style="width: 125px; border-radius: 6px"
+                            />
+                            <span class="note mx-2">-</span>
+                            <input
+                              style="width: 125px; border-radius: 6px"
+                              class="d-inline-block"
+                              type="date"
+                              name="Date to"
+                              id="choose_date_to"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <!-- Choose Date -->
+
+                      <!-- Choose Warehouse -->
+                      <div class="col-6 px-2">
+                        <label for="choose_warehouse">
+                          <span class="label">Choose Warehouse</span>
+                          <select name="warehouse" id="choose_warehouse">
+                            <option value="0">Select warehouse</option>
+                            <option value="1">Warehouse 1</option>
+                            <option value="2">Warehouse 2</option>
+                          </select>
+                        </label>
+                      </div>
+                      <!-- Choose Warehouse -->
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="row">
+                      <div class="col-4 p-2">
+                        <button
+                          class="btn-shadow px-2 py-1 secondary-solid rounded-corner-sm"
+                          style="font-size: 14px; font-weight: 500"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Submit Button -->
+                  </div>
+                </form>
+              </div>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button
+                  type="button"
+                  class="btn btn-sm primary-solid btn-warning px-2 py-1"
+                >
+                  PDF
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm primary-solid px-2 py-1 btn-primary"
+                >
+                  CSV
+                </button>
+                <button type="button" class="btn btn-sm btn-info px-2 py-1">
+                  Print
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm primary-solid px-2 py-1 btn-danger"
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           </div>
           <!-- Table Controller -->
